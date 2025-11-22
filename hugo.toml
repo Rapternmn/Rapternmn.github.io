@@ -1,0 +1,29 @@
+baseURL = "https://rapternmn.github.io/"
+languageCode = "en-us"
+title = "Rapternmn Blog"
+theme = "PaperMod"
+relativeURLs = false
+canonifyURLs = true
+
+[params]
+  author = "Naman Bhayani"
+  defaultTheme = "auto"
+  showReadingTime = true
+  showToc = true
+  math = true        # Enable MathJax
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
