@@ -57,10 +57,18 @@ canonifyURLs = true
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    identifier = "deep-learning"
+    name = "Deep Learning"
+    url = "/deep-learning/"
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
+    identifier = "data-science"
+    name = "Data Science"
+    url = "/data-science/"
+  [[menu.main]]
+    identifier = "nlp"
+    name = "NLP"
+    url = "/nlp/"
+  [[menu.main]]
+    identifier = "genai"
+    name = "GenAI"
+    url = "/genai/"
