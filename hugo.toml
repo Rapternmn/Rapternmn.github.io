@@ -1,6 +1,6 @@
 baseURL = "https://rapternmn.github.io/"
 languageCode = "en-us"
-title = "Rapternmn Blog"
+title = "Naman's AI Blog"
 theme = "PaperMod"
 relativeURLs = false
 canonifyURLs = true
