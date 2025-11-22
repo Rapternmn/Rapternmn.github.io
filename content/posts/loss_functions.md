@@ -4,7 +4,7 @@ date = 2025-11-21T19:56:11+05:30
 draft = false
 +++
 
-# 🧠 1. What is a Loss Function? (High-Level Overview)
+## 🧠 1. What is a Loss Function? (High-Level Overview)
 
 A loss function measures the difference between the model's prediction and the ground truth.
 
@@ -15,24 +15,6 @@ It answers:
 During training, optimization tries to minimize the loss by updating weights (using gradients).
 
 **Loss → Gradient → Weight Update → Better Predictions.**
-
----
-
-## Table of Contents
-
-1. [What is a Loss Function?](#-1-what-is-a-loss-function-high-level-overview)
-2. [Why do we need Loss Functions?](#-2-why-do-we-need-loss-functions)
-3. [How Are Loss Functions Used in Training?](#-how-are-loss-functions-used-in-training)
-4. [Types of Loss Functions in Deep Learning](#-3-types-of-loss-functions-in-deep-learning)
-   - [Regression Losses](#-1-regression-losses)
-   - [Classification Losses](#-2-classification-losses)
-   - [Ranking / Metric Learning Losses](#-3-ranking--metric-learning-losses)
-   - [Sequence Modeling Losses](#-4-sequence-modeling-losses)
-   - [Image Losses](#-5-image-losses)
-   - [Generative / Autoencoder Losses](#-6-generative--autoencoder-losses)
-   - [Reinforcement Learning Losses](#-7-reinforcement-learning-losses)
-   - [Autoencoder & Reconstruction Losses](#-8-autoencoder--reconstruction-losses)
-5. [Summary: Quick Reference Guide](#-summary-quick-reference-guide)
 
 ---
 
