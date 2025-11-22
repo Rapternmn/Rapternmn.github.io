@@ -11,6 +11,11 @@ canonifyURLs = true
   showReadingTime = true
   showToc = true
   math = true        # Enable MathJax
+  
+  # Social Icons - displayed in home info and profile mode
+  [[params.socialIcons]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/your-profile"  # Update with your LinkedIn URL
 
 [markup.goldmark.renderer]
   unsafe = true
