@@ -2,6 +2,7 @@
 title = 'Loss Functions'
 date = 2025-11-21T19:56:11+05:30
 draft = false
+description = 'A comprehensive guide to loss functions in deep learning, covering regression, classification, ranking, and sequence modeling losses with mathematical foundations and practical applications.'
 +++
 
 ## 🧠 1. What is a Loss Function? (High-Level Overview)

@@ -12,6 +12,13 @@ canonifyURLs = true
   showToc = true
   math = true        # Enable MathJax
   
+  # Configure which sections appear on homepage
+  # This ensures all posts from all sections show on the homepage
+  mainSections = ["deep-learning", "data-science", "nlp", "genai"]
+  
+  # Date format for posts
+  DateFormat = "January 2, 2006"
+  
   # Enable comments on posts
   comments = true
   
