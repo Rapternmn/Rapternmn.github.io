@@ -12,6 +12,10 @@ canonifyURLs = true
   showToc = true
   math = true        # Enable MathJax
   
+  # Disable special first post styling on homepage
+  # This ensures all posts have consistent background and styling
+  disableSpecial1stPost = true
+  
   # Configure which sections appear on homepage
   # This ensures all posts from all sections show on the homepage
   mainSections = ["deep-learning", "data-science", "nlp", "genai"]
