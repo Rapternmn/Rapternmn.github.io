@@ -2,6 +2,7 @@
 title = "Vector Stores: Comprehensive Guide"
 date = 2025-11-22T13:00:00+05:30
 draft = false
+weight = 5
 description = "Comprehensive guide to vector databases and stores for Generative AI applications covering architecture, popular vector stores (Pinecone, Weaviate, Chroma), indexing strategies, querying, metadata filtering, and scalability."
 +++
 

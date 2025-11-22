@@ -2,6 +2,7 @@
 title = "Recommender Systems: Interview Q&A Guide"
 date = 2025-11-22T10:00:00+05:30
 draft = false
+weight = 7
 description = "Comprehensive guide to recommender systems, collaborative filtering, and recommendation algorithms. Covers collaborative filtering, content-based filtering, hybrid approaches, matrix factorization, and deep learning for recommendations."
 +++
 

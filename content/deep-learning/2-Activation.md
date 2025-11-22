@@ -2,6 +2,7 @@
 title = "Activation Functions: Overview"
 date = 2025-11-22T11:00:00+05:30
 draft = false
+weight = 2
 description = "Comprehensive guide to activation functions in neural networks. Covers sigmoid, tanh, ReLU, Leaky ReLU, ELU, Swish, GELU, softmax, and their mathematical properties, use cases, and best practices."
 +++
 

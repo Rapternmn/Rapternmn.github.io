@@ -2,6 +2,7 @@
 title = "Embeddings: Comprehensive Guide"
 date = 2025-11-22T13:00:00+05:30
 draft = false
+weight = 4
 description = "Comprehensive guide to embeddings in Generative AI covering embedding concepts, models, dimensions, applications, quality evaluation, and best practices for RAG and semantic search systems."
 +++
 

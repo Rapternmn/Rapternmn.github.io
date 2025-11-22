@@ -2,6 +2,7 @@
 title = "Tokenization in NLP"
 date = 2025-11-22T12:00:00+05:30
 draft = false
+weight = 2
 description = "Comprehensive guide to tokenization in NLP covering word-level, subword, and byte-level tokenization techniques. Includes detailed explanations of BPE, WordPiece, SentencePiece algorithms and their applications."
 +++
 

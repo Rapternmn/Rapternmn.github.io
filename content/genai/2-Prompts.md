@@ -2,6 +2,7 @@
 title = "Prompts: Chat Format and Templates"
 date = 2025-11-22T13:00:00+05:30
 draft = false
+weight = 2
 description = "Comprehensive guide to prompt engineering covering chat format APIs (OpenAI, Anthropic, Claude), prompt templates, deployment formats, and best practices for effective prompt design."
 +++
 

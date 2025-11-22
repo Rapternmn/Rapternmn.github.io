@@ -2,6 +2,7 @@
 title = "Transformer Architecture"
 date = 2025-11-22T12:00:00+05:30
 draft = false
+weight = 3
 description = "Comprehensive guide to the Transformer architecture introduced in 'Attention is All You Need'. Covers encoder-decoder architecture, self-attention mechanisms, multi-head attention, positional encoding, and training processes."
 +++
 

@@ -2,6 +2,7 @@
 title = "Statistics & Probability: Interview Q&A Guide"
 date = 2025-11-22T10:00:00+05:30
 draft = false
+weight = 3
 description = "Essential statistics and probability concepts for data science interviews. Covers probability fundamentals, distributions, central limit theorem, hypothesis testing, confidence intervals, and Bayesian statistics."
 +++
 

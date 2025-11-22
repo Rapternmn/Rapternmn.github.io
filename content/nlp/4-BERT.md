@@ -2,6 +2,7 @@
 title = "BERT: Bidirectional Encoder Representations from Transformers"
 date = 2025-11-22T12:00:00+05:30
 draft = false
+weight = 4
 description = "Comprehensive guide to BERT architecture covering bidirectional context understanding, masked language modeling, next sentence prediction, fine-tuning strategies, and BERT variants including DistilBERT, RoBERTa, and ALBERT."
 +++
 

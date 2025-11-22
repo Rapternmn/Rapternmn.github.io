@@ -2,6 +2,7 @@
 title = "NLP Basics"
 date = 2025-11-22T12:00:00+05:30
 draft = false
+weight = 1
 description = "Comprehensive guide to NLP fundamentals covering text preprocessing, text representation methods, word embeddings, language models, sequence models, transformers, NLP tasks, and evaluation metrics."
 +++
 

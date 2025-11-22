@@ -2,6 +2,7 @@
 title = "LLM Evaluation Metrics"
 date = 2025-11-22T13:00:00+05:30
 draft = false
+weight = 3
 description = "Comprehensive guide to LLM evaluation metrics covering knowledge & reasoning benchmarks (MMLU, ARC), code generation metrics, translation & summarization metrics, language modeling metrics, and classification metrics."
 +++
 

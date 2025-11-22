@@ -2,6 +2,7 @@
 title = "GPT: Generative Pre-trained Transformer"
 date = 2025-11-22T12:00:00+05:30
 draft = false
+weight = 5
 description = "Comprehensive guide to GPT architecture covering decoder-only transformers, autoregressive generation, GPT variants (GPT-1 through GPT-4), ChatGPT, RLHF, context length, and applications of generative language models."
 +++
 

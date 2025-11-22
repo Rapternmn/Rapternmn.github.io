@@ -2,6 +2,7 @@
 title = "Deep Neural Networks (DNN): Fundamentals"
 date = 2025-11-22T11:00:00+05:30
 draft = false
+weight = 3
 description = "Comprehensive guide to Deep Neural Networks covering feedforward propagation, backpropagation, loss functions, optimization algorithms (SGD, Adam), regularization techniques (dropout, batch normalization), and mathematical foundations."
 +++
 

@@ -2,6 +2,7 @@
 title = "Retrievers: Comprehensive Guide"
 date = 2025-11-22T13:00:00+05:30
 draft = false
+weight = 6
 description = "Comprehensive guide to retrieval systems in RAG and GenAI applications covering dense retrieval, sparse retrieval, hybrid retrieval, reranking, query processing, evaluation metrics, and optimization techniques."
 +++
 

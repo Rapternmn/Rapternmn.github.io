@@ -2,6 +2,7 @@
 title = "GenAI Concepts: Interview Q&A Guide"
 date = 2025-11-22T13:00:00+05:30
 draft = false
+weight = 1
 description = "Comprehensive guide to Generative AI concepts covering core concepts, parameters & generation control, training paradigms, architecture, evaluation, RAG, system design, optimization, safety, and latest trends."
 +++
 
