@@ -1,6 +1,9 @@
-# Recommender Systems: Interview Q&A Guide
-
-Comprehensive guide to recommender systems, collaborative filtering, and recommendation algorithms.
++++
+title = "Recommender Systems: Interview Q&A Guide"
+date = 2025-11-22T10:00:00+05:30
+draft = false
+description = "Comprehensive guide to recommender systems, collaborative filtering, and recommendation algorithms. Covers collaborative filtering, content-based filtering, hybrid approaches, matrix factorization, and deep learning for recommendations."
++++
 
 
 ## 1. Recommender Systems Overview

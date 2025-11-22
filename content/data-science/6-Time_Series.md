@@ -1,6 +1,9 @@
-# Time Series Analysis: Interview Q&A Guide
-
-Comprehensive guide to time series analysis, forecasting, and related concepts for data science interviews.
++++
+title = "Time Series Analysis: Interview Q&A Guide"
+date = 2025-11-22T10:00:00+05:30
+draft = false
+description = "Comprehensive guide to time series analysis, forecasting, and related concepts for data science interviews. Covers time series fundamentals, stationarity, ARIMA models, seasonal decomposition, exponential smoothing, and forecasting methods."
++++
 
 
 ## 1. Time Series Fundamentals

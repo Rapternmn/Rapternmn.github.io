@@ -1,6 +1,9 @@
-# Evaluation Metrics: Comprehensive Guide
-
-A comprehensive guide to evaluation metrics for classification, regression, ranking, and specialized ML tasks.
++++
+title = "Evaluation Metrics: Comprehensive Guide"
+date = 2025-11-22T10:00:00+05:30
+draft = false
+description = "A comprehensive guide to evaluation metrics for classification, regression, ranking, and specialized ML tasks. Covers confusion matrix, ROC-AUC, precision-recall, regression metrics, ranking metrics, and metric selection strategies."
++++
 
 
 ## 1. Classification Metrics

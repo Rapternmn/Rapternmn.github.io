@@ -1,6 +1,9 @@
-# Machine Learning Concepts & Theory
-
-A comprehensive guide covering fundamental ML concepts, algorithms, and mathematical foundations for interviews.
++++
+title = "Machine Learning Concepts & Theory"
+date = 2025-11-22T10:00:00+05:30
+draft = false
+description = "A comprehensive guide covering fundamental ML concepts, algorithms, and mathematical foundations for interviews. Topics include bias-variance tradeoff, regularization, ensemble methods, optimization algorithms, and more."
++++
 
 ---
 
