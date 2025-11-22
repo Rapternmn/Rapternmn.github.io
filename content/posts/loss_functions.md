@@ -1,5 +1,5 @@
 +++
-title = 'Loss_functions'
+title = 'Loss Functions'
 date = 2025-11-21T19:56:11+05:30
 draft = false
 +++
