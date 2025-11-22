@@ -1,9 +1,9 @@
 +++
-title = "Time Series Analysis: Interview Q&A Guide"
+title = "Time Series Analysis"
 date = 2025-11-22T10:00:00+05:30
 draft = false
 weight = 6
-description = "Comprehensive guide to time series analysis, forecasting, and related concepts for data science interviews. Covers time series fundamentals, stationarity, ARIMA models, seasonal decomposition, exponential smoothing, and forecasting methods."
+description = "Comprehensive guide to time series analysis, forecasting, and related concepts. Covers time series fundamentals, stationarity, ARIMA models, seasonal decomposition, exponential smoothing, and forecasting methods."
 +++
 
 

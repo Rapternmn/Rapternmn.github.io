@@ -1,5 +1,5 @@
 +++
-title = "GenAI Concepts: Interview Q&A Guide"
+title = "GenAI Concepts"
 date = 2025-11-22T13:00:00+05:30
 draft = false
 weight = 1

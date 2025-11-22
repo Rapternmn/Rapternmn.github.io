@@ -1,9 +1,9 @@
 +++
-title = "Data Quality & Validation: Interview Q&A Guide"
+title = "Data Quality & Validation"
 date = 2025-11-22T10:00:00+05:30
 draft = false
 weight = 9
-description = "Comprehensive guide to data quality, validation, and data profiling for data science interviews. Covers data profiling, data validation, outlier detection, missing data handling, data drift detection, and schema validation."
+description = "Comprehensive guide to data quality, validation, and data profiling. Covers data profiling, data validation, outlier detection, missing data handling, data drift detection, and schema validation."
 +++
 
 

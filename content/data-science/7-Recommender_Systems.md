@@ -1,5 +1,5 @@
 +++
-title = "Recommender Systems: Interview Q&A Guide"
+title = "Recommender Systems"
 date = 2025-11-22T10:00:00+05:30
 draft = false
 weight = 7

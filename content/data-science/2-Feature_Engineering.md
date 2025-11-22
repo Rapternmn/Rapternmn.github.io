@@ -1,9 +1,9 @@
 +++
-title = "Feature Engineering: Interview Q&A Guide"
+title = "Feature Engineering"
 date = 2025-11-22T10:00:00+05:30
 draft = false
 weight = 2
-description = "A comprehensive guide to feature engineering techniques and best practices for machine learning interviews. Covers handling missing values, categorical encoding, feature scaling, feature selection, and feature creation."
+description = "A comprehensive guide to feature engineering techniques and best practices. Covers handling missing values, categorical encoding, feature scaling, feature selection, and feature creation."
 +++
 
 
