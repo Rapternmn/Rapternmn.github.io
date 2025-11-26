@@ -55,6 +55,34 @@ canonifyURLs = true
   # [params.disqus]
   #   shortname = "your-disqus-shortname"
   
+  # Analytics Configuration
+  # Choose one or more analytics services to track your blog visitors
+  # [params.analytics]
+  #   # Google Analytics 4 (GA4) - Recommended
+  #   # Get your Measurement ID from: https://analytics.google.com/
+  #   [params.analytics.google]
+  #     id = ""  # Your GA4 Measurement ID (e.g., "G-XXXXXXXXXX")
+  #     # analytics = ""  # Legacy Universal Analytics ID (UA-XXXXXXXXX-X) - deprecated
+  #     # SiteVerificationTag = ""  # For Google Search Console verification
+    
+  #   # Plausible Analytics (Privacy-friendly, GDPR compliant)
+  #   # Get your domain from: https://plausible.io/
+  #   [params.analytics.plausible]
+  #     domain = ""  # Your domain (e.g., "rapternmn.github.io")
+    
+  #   # Umami Analytics (Self-hosted, Privacy-friendly)
+  #   # [params.analytics.umami]
+  #   #   id = ""  # Your Umami website ID
+  #   #   src = "https://analytics.umami.is/script.js"  # Your Umami instance URL
+    
+  #   # GoatCounter Analytics (Privacy-friendly, Free tier available)
+  #   # [params.analytics.goatcounter]
+  #   #   code = ""  # Your GoatCounter code
+    
+  #   # Cloudflare Web Analytics (Privacy-friendly, Free)
+  #   # [params.analytics.cloudflare]
+  #   #   token = ""  # Your Cloudflare Web Analytics token
+  
   # Social Icons - displayed in home info and profile mode
   [[params.socialIcons]]
     name = "LinkedIn"
