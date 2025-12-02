@@ -1,0 +1,43 @@
+{{- /* Google Analytics (GA4) */ -}}
+{{- if site.Params.analytics.google.id }}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.Params.analytics.google.id }}');
+</script>
+{{- end }}
+
+{{- /* Google Analytics (Universal Analytics - Legacy) */ -}}
+{{- if site.Params.analytics.google.analytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.Params.analytics.google.analytics }}');
+</script>
+{{- end }}
+
+{{- /* Plausible Analytics (Privacy-friendly) */ -}}
+{{- if site.Params.analytics.plausible.domain }}
+<script defer data-domain="{{ site.Params.analytics.plausible.domain }}" src="https://plausible.io/js/script.js"></script>
+{{- end }}
+
+{{- /* Umami Analytics (Self-hosted, Privacy-friendly) */ -}}
+{{- if site.Params.analytics.umami.id }}
+<script async defer data-website-id="{{ site.Params.analytics.umami.id }}" src="{{ site.Params.analytics.umami.src | default "https://analytics.umami.is/script.js" }}"></script>
+{{- end }}
+
+{{- /* GoatCounter Analytics (Privacy-friendly) */ -}}
+{{- if site.Params.analytics.goatcounter.code }}
+<script data-goatcounter="https://{{ site.Params.analytics.goatcounter.code }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{{- end }}
+
+{{- /* Cloudflare Web Analytics (Privacy-friendly) */ -}}
+{{- if site.Params.analytics.cloudflare.token }}
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.Params.analytics.cloudflare.token }}"}'></script>
+{{- end }}
+
