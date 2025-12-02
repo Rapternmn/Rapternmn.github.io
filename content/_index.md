@@ -2,9 +2,9 @@
 title = "Welcome"
 +++
 
-# 👋 Welcome to Naman's AI Blog
+# 👋 Welcome to The AI Notebook
 
-Hi, this is Naman. I'm documenting my learning notes and insights in this blog. I'm passionate about exploring the world of Artificial Intelligence, Machine Learning, and Data Science.
+Hi, I'm **Naman Bhayani**. I'm documenting my learning notes and insights in this blog. I'm passionate about exploring the world of Artificial Intelligence, Machine Learning, and Data Science.
 
 Here you'll find articles covering:
 
@@ -14,4 +14,8 @@ Here you'll find articles covering:
 - ✨ **GenAI** - Generative AI, LLMs, and AI-powered content creation
 
 Feel free to explore, learn, and engage with the content!
+
+---
+
+**Connect with me:** [LinkedIn](https://www.linkedin.com/in/your-profile)
 
