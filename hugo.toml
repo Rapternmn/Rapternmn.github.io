@@ -65,7 +65,7 @@ canonifyURLs = true
   # Social Icons - displayed in home info and profile mode
   [[params.socialIcons]]
     name = "LinkedIn"
-    url = "https://www.linkedin.com/in/your-profile"  # Update with your LinkedIn URL
+    url = "https://www.linkedin.com/in/naman-bhayani-9b183692"  # Update with your LinkedIn URL
 
 [markup.goldmark.renderer]
   unsafe = true
