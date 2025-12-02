@@ -37,7 +37,9 @@ Clustering is an unsupervised machine learning technique that groups similar dat
 
 Most common distance metric for continuous features:
 
-\[d(x, y) = \sqrt{\sum_{i=1}^{n}(x_i - y_i)^2}\]
+```
+d(x, y) = √(Σ(i=1 to n) (x_i - y_i)²)
+```
 
 **Properties:**
 - Symmetric: $d(x, y) = d(y, x)$
@@ -46,7 +48,9 @@ Most common distance metric for continuous features:
 
 ### Manhattan Distance (L1)
 
-\[d(x, y) = \sum_{i=1}^{n}|x_i - y_i|\]
+```
+d(x, y) = Σ(i=1 to n) |x_i - y_i|
+```
 
 **Use Cases:**
 - When features have different scales
@@ -57,7 +61,9 @@ Most common distance metric for continuous features:
 
 Measures angle between vectors, not magnitude:
 
-\[\text{cosine}(x, y) = \frac{x \cdot y}{||x|| \cdot ||y||}\]
+```
+cosine(x, y) = (x · y) / (||x|| · ||y||)
+```
 
 **Use Cases:**
 - Text/document clustering
@@ -68,7 +74,9 @@ Measures angle between vectors, not magnitude:
 
 For categorical/binary data:
 
-\[d(x, y) = \sum_{i=1}^{n} \mathbb{1}(x_i \neq y_i)\]
+```
+d(x, y) = Σ(i=1 to n) 1(x_i ≠ y_i)
+```
 
 **Use Cases:**
 - Binary feature vectors
@@ -90,7 +98,9 @@ For categorical/binary data:
 
 Minimize within-cluster sum of squares (WCSS):
 
-\[\text{argmin}_S \sum_{i=1}^{k} \sum_{x \in S_i} ||x - \mu_i||^2\]
+```
+argmin_S Σ(i=1 to k) Σ(x ∈ S_i) ||x - μ_i||²
+```
 
 Where:
 - $S_i$ = cluster $i$
@@ -285,7 +295,9 @@ Probabilistic clustering that assumes data is generated from a mixture of Gaussi
 
 ### Mathematical Model
 
-\[p(x) = \sum_{k=1}^{K} \pi_k \mathcal{N}(x | \mu_k, \Sigma_k)\]
+```
+p(x) = Σ(k=1 to K) π_k · N(x | μ_k, Σ_k)
+```
 
 Where:
 - $\pi_k$ = mixing coefficient (weight of component $k$)
@@ -297,13 +309,17 @@ Where:
 
 **E-Step (Expectation):**
 - Calculate responsibility (probability) of each point belonging to each cluster:
-  \[\gamma(z_{nk}) = \frac{\pi_k \mathcal{N}(x_n | \mu_k, \Sigma_k)}{\sum_{j=1}^{K} \pi_j \mathcal{N}(x_n | \mu_j, \Sigma_j)}\]
+  ```
+  γ(z_nk) = (π_k · N(x_n | μ_k, Σ_k)) / (Σ(j=1 to K) π_j · N(x_n | μ_j, Σ_j))
+  ```
 
 **M-Step (Maximization):**
 - Update parameters:
-  \[\mu_k = \frac{1}{N_k} \sum_{n=1}^{N} \gamma(z_{nk}) x_n\]
-  \[\Sigma_k = \frac{1}{N_k} \sum_{n=1}^{N} \gamma(z_{nk}) (x_n - \mu_k)(x_n - \mu_k)^T\]
-  \[\pi_k = \frac{N_k}{N}\]
+  ```
+  μ_k = (1/N_k) Σ(n=1 to N) γ(z_nk) · x_n
+  Σ_k = (1/N_k) Σ(n=1 to N) γ(z_nk) · (x_n - μ_k)(x_n - μ_k)ᵀ
+  π_k = N_k / N
+  ```
 
 Where $N_k = \sum_{n=1}^{N} \gamma(z_{nk})$
 
@@ -379,7 +395,9 @@ Where $N_k = \sum_{n=1}^{N} \gamma(z_{nk})$
 ### Internal Metrics
 
 **Silhouette Score:**
-\[s(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}\]
+```
+s(i) = (b(i) - a(i)) / max(a(i), b(i))
+```
 
 Where:
 - $a(i)$ = average distance to points in same cluster
@@ -416,10 +434,14 @@ Where:
 ### Feature Scaling
 
 **Standardization (Z-score):**
-\[z = \frac{x - \mu}{\sigma}\]
+```
+z = (x - μ) / σ
+```
 
 **Normalization (Min-Max):**
-\[x_{norm} = \frac{x - x_{min}}{x_{max} - x_{min}}\]
+```
+x_norm = (x - x_min) / (x_max - x_min)
+```
 
 **Why Important:**
 - Distance metrics are scale-sensitive
