@@ -29,9 +29,9 @@ E[(y - f̂(x))²] = Bias[f̂(x)]² + Var[f̂(x)] + σ²
 ```
 
 Where:
-- **Bias**: $E[\hat{f}(x)] - f(x)$ (difference between expected prediction and true value)
-- **Variance**: $E[(\hat{f}(x) - E[\hat{f}(x)])^2]$ (variability of predictions)
-- **Irreducible Error**: $\sigma^2$ (noise in data, cannot be reduced)
+- **Bias**: `E[f̂(x)] - f(x)` (difference between expected prediction and true value)
+- **Variance**: `E[(f̂(x) - E[f̂(x)])²]` (variability of predictions)
+- **Irreducible Error**: `σ²` (noise in data, cannot be reduced)
 
 ### Key Relationships
 
@@ -144,7 +144,7 @@ You want to find a balance—enough complexity to capture patterns, but not so m
 P(y=1|x) = 1 / (1 + e^(-(wᵀx + b))) = σ(wᵀx + b)
 ```
 
-Where $\sigma$ is the sigmoid function.
+Where `σ` is the sigmoid function.
 
 #### Decision Trees
 
@@ -163,9 +163,9 @@ Where $\sigma$ is the sigmoid function.
 - Can be combined into Random Forest or Gradient Boosting
 
 **Splitting Criteria**:
-- **Gini Impurity**: $Gini = 1 - \sum_{i=1}^{c} p_i^2$
-- **Entropy**: $Entropy = -\sum_{i=1}^{c} p_i \log_2(p_i)$
-- **Information Gain**: $IG = Entropy(parent) - \sum \frac{|child|}{|parent|} \times Entropy(child)$
+- **Gini Impurity**: `Gini = 1 - Σ(i=1 to c) p_i²`
+- **Entropy**: `Entropy = -Σ(i=1 to c) p_i · log₂(p_i)`
+- **Information Gain**: `IG = Entropy(parent) - Σ(|child|/|parent|) × Entropy(child)`
 
 ### Algorithm Comparison Table
 
@@ -188,7 +188,7 @@ Regularization is a technique used to prevent overfitting by adding a penalty te
 
 ### L1 Regularization (Lasso)
 
-**Penalty Term**: $L1 = \lambda \sum_{i=1}^{n} |w_i|$
+**Penalty Term**: `L1 = λ Σ(i=1 to n) |w_i|`
 
 **Loss Function**:
 ```
@@ -205,7 +205,7 @@ L = MSE + λ × Σ|w_i|
 
 ### L2 Regularization (Ridge)
 
-**Penalty Term**: $L2 = \lambda \sum_{i=1}^{n} w_i^2$
+**Penalty Term**: `L2 = λ Σ(i=1 to n) w_i²`
 
 **Loss Function**:
 ```
@@ -238,15 +238,15 @@ L = MSE + λ₁ × Σ|w_i| + λ₂ × Σw_i²
 
 | Regularization | Penalty | Effect | Use Case |
 |----------------|---------|-------|----------|
-| **L1 (Lasso)** | $\lambda \sum \|w_i\|$ | Sparse models, feature selection | High-dimensional data, feature selection needed |
-| **L2 (Ridge)** | $\lambda \sum w_i^2$ | Shrinks all weights | General shrinkage, correlated features |
-| **Elastic Net** | $\lambda_1 \sum \|w_i\| + \lambda_2 \sum w_i^2$ | Feature selection + shrinkage | High-dimensional datasets with correlations |
+| **L1 (Lasso)** | `λ Σ|w_i|` | Sparse models, feature selection | High-dimensional data, feature selection needed |
+| **L2 (Ridge)** | `λ Σw_i²` | Shrinks all weights | General shrinkage, correlated features |
+| **Elastic Net** | `λ₁ Σ|w_i| + λ₂ Σw_i²` | Feature selection + shrinkage | High-dimensional datasets with correlations |
 
-### Choosing $\lambda$ (Regularization Parameter)
+### Choosing `λ` (Regularization Parameter)
 
-- **Small $\lambda$**: Less regularization, model can be more complex
-- **Large $\lambda$**: More regularization, simpler model
-- **Optimal $\lambda$**: Found via cross-validation
+- **Small `λ`**: Less regularization, model can be more complex
+- **Large `λ`**: More regularization, simpler model
+- **Optimal `λ`**: Found via cross-validation
 
 ---
 
@@ -272,7 +272,7 @@ Cross-validation splits data into multiple folds to ensure the model generalizes
 CV(k) = (1/k) × Σ Error_i
 ```
 
-Where $\text{Error}_i$ is the error on fold i.
+Where `Error_i` is the error on fold i.
 
 ### Types of Cross-Validation
 
@@ -401,15 +401,15 @@ Ensemble methods combine multiple models to improve performance. Two main approa
 ŷ_i = Σ f_k(x_i)
 ```
 
-Where $f_k$ are the trees and the objective is:
+Where `f_k` are the trees and the objective is:
 
 ```
 Obj = Σ l(y_i, ŷ_i) + Σ Ω(f_k)
 ```
 
 Where:
-- $l$ is the loss function
-- $\Omega$ is the regularization term
+- `l` is the loss function
+- `Ω` is the regularization term
 
 **Key Features**:
 - **Gradient-based**: Uses second-order gradients for better optimization
@@ -441,7 +441,7 @@ Where:
 L = Σ log(1 + e^(-(s_i - s_j)))
 ```
 
-Where $s_i, s_j$ are predicted scores for documents i and j.
+Where `s_i, s_j` are predicted scores for documents i and j.
 
 ### Comparison: Bagging vs Boosting
 
@@ -585,7 +585,7 @@ R² = 1 - (Σ(y_i - ŷ_i)²) / (Σ(y_i - ȳ)²)
 ```
 
 - Proportion of variance explained
-- Range: $-\infty$ to 1 (1 = perfect, 0 = no better than mean)
+- Range: `-∞` to 1 (1 = perfect, 0 = no better than mean)
 
 ### Ranking Metrics
 
@@ -601,8 +601,8 @@ NDCG@K = DCG@K / IDCG@K
 ```
 
 Where:
-- $rel_i$ = relevance score of item at position i
-- $IDCG@K$ = Ideal DCG (DCG of perfect ranking)
+- `rel_i` = relevance score of item at position i
+- `IDCG@K` = Ideal DCG (DCG of perfect ranking)
 - K = number of items to consider
 
 **Use Case**: Search engines, recommendation systems, learning-to-rank
@@ -632,9 +632,9 @@ Where:
 ```
 
 Where:
-- $\theta$ = parameters (weights)
-- $\alpha$ = learning rate
-- $\nabla_\theta J$ = gradient of loss function
+- `θ` = parameters (weights)
+- `α` = learning rate
+- `∇_θ J` = gradient of loss function
 
 ### Variants of Gradient Descent
 
@@ -650,7 +650,7 @@ Where:
 - Uses one example per update
 - **Pros**: Fast, can update online, escapes local minima
 - **Cons**: Noisy updates, may not converge
-- **Update Rule**: $\theta_{t+1} = \theta_t - \alpha \nabla_\theta J(\theta_t; x_i, y_i)$
+- **Update Rule**: `θ_(t+1) = θ_t - α ∇_θ J(θ_t; x_i, y_i)`
 
 #### 3. Mini-Batch Gradient Descent
 
@@ -671,7 +671,7 @@ v_t = β × v_(t-1) + (1-β) × ∇_θ J(θ_t)
 θ_(t+1) = θ_t - α × v_t
 ```
 
-Where $\beta$ is momentum coefficient (typically 0.9)
+Where `β` is momentum coefficient (typically 0.9)
 
 **Benefits**: Smoother updates, faster convergence, escapes shallow local minima
 
@@ -699,7 +699,7 @@ m̂_t = m_t / (1-β₁ᵗ),  v̂_t = v_t / (1-β₂ᵗ)  (bias correction)
 θ_(t+1) = θ_t - (α / (√v̂_t + ε)) × m̂_t
 ```
 
-**Default Parameters**: $\beta_1 = 0.9$, $\beta_2 = 0.999$, $\epsilon = 10^{-8}$
+**Default Parameters**: `β₁ = 0.9`, `β₂ = 0.999`, `ε = 10⁻⁸`
 
 **Benefits**: 
 - Combines benefits of momentum and adaptive learning rates
@@ -763,7 +763,7 @@ Penalize misclassifying minority class more:
 Loss = Σ(w_(y_i) × L(y_i, ŷ_i))
 ```
 
-Where $w_{y_i}$ is the weight for class $y_i$, typically:
+Where `w_(y_i)` is the weight for class `y_i`, typically:
 ```
 w_class = n_total / (n_classes × n_class)
 ```
@@ -809,7 +809,7 @@ PCA projects high-dimensional data onto a lower-dimensional subspace by finding 
 
 **Goal**: Find directions of maximum variance
 
-1. **Standardize data**: $X_{std} = \frac{X - \mu}{\sigma}$
+1. **Standardize data**: `X_std = (X - μ) / σ`
 
 2. **Compute covariance matrix**: 
 
@@ -824,8 +824,8 @@ C = P × Λ × Pᵀ
 ```
 
 Where:
-- $P$ = eigenvectors (principal components)
-- $\Lambda$ = eigenvalues (variance explained)
+- `P` = eigenvectors (principal components)
+- `Λ` = eigenvalues (variance explained)
 
 4. **Project data**:
 
@@ -833,7 +833,7 @@ Where:
 Y = X_std × P_k
 ```
 
-Where $P_k$ contains top k eigenvectors.
+Where `P_k` contains top k eigenvectors.
 
 #### Key Properties
 
@@ -901,18 +901,18 @@ y_i(wᵀx_i + b) ≥ 1 - ξ_i,  ξ_i ≥ 0
 ```
 
 Where:
-- $w$ = weight vector
-- $b$ = bias
-- $C$ = regularization parameter
-- $\xi_i$ = slack variables (for soft margin)
+- `w` = weight vector
+- `b` = bias
+- `C` = regularization parameter
+- `ξ_i` = slack variables (for soft margin)
 
 #### Kernel Trick
 
 For non-linear boundaries, use kernel functions:
 
-- **Linear**: $K(x_i, x_j) = x_i^T x_j$
-- **Polynomial**: $K(x_i, x_j) = (x_i^T x_j + 1)^d$
-- **RBF**: $K(x_i, x_j) = \exp(-\gamma ||x_i - x_j||^2)$
+- **Linear**: `K(x_i, x_j) = x_iᵀ x_j`
+- **Polynomial**: `K(x_i, x_j) = (x_iᵀ x_j + 1)^d`
+- **RBF**: `K(x_i, x_j) = exp(-γ ||x_i - x_j||²)`
 
 #### When to Use
 
@@ -940,7 +940,7 @@ Unsupervised learning algorithm that partitions data into k clusters.
 J = Σ Σ ||x - μ_i||²
 ```
 
-Where $\mu_i$ is the centroid of cluster $C_i$.
+Where `μ_i` is the centroid of cluster `C_i`.
 
 #### Limitations
 
@@ -1041,9 +1041,9 @@ P(x) = Σ(π_k × N(x|μ_k, Σ_k))
 ```
 
 Where:
-- $\pi_k$: Mixing coefficient (weight of component k)
-- $\mu_k$: Mean of component k
-- $\Sigma_k$: Covariance of component k
+- `π_k`: Mixing coefficient (weight of component k)
+- `μ_k`: Mean of component k
+- `Σ_k`: Covariance of component k
 
 #### Advantages
 
@@ -1141,9 +1141,9 @@ Instance-based learning: classify based on k nearest neighbors.
 
 #### Distance Metrics
 
-- **Euclidean**: $d(x,y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}$
-- **Manhattan**: $d(x,y) = \sum_{i=1}^{n} |x_i - y_i|$
-- **Cosine**: $d(x,y) = 1 - \frac{x \cdot y}{||x|| ||y||}$
+- **Euclidean**: `d(x,y) = √(Σ(i=1 to n) (x_i - y_i)²)`
+- **Manhattan**: `d(x,y) = Σ(i=1 to n) |x_i - y_i|`
+- **Cosine**: `d(x,y) = 1 - (x · y) / (||x|| ||y||)`
 
 #### When to Use
 
@@ -1252,20 +1252,20 @@ Feature engineering is the process of creating, transforming, and selecting feat
 
 #### 3. Feature Scaling
 
-- **Standardization**: $z = \frac{x - \mu}{\sigma}$ (mean=0, std=1)
-- **Normalization**: $x_{norm} = \frac{x - x_{min}}{x_{max} - x_{min}}$ (range [0,1])
+- **Standardization**: `z = (x - μ) / σ` (mean=0, std=1)
+- **Normalization**: `x_norm = (x - x_min) / (x_max - x_min)` (range [0,1])
 - **Robust Scaling**: Use median and IQR (robust to outliers)
 
 #### 4. Feature Transformation
 
-- **Log Transform**: $x' = \log(x + 1)$ (for skewed data)
-- **Polynomial Features**: $x^2, x^3, x_1 \times x_2$
+- **Log Transform**: `x' = log(x + 1)` (for skewed data)
+- **Polynomial Features**: `x², x³, x₁ × x₂`
 - **Binning**: Convert continuous to categorical
 - **Power Transforms**: Box-Cox, Yeo-Johnson
 
 #### 5. Feature Creation
 
-- **Interaction Terms**: $x_1 \times x_2$
+- **Interaction Terms**: `x₁ × x₂`
 - **Aggregations**: Mean, sum, count by groups
 - **Time-based**: Day of week, hour, time since event
 - **Domain-specific**: Ratios, differences, combinations

@@ -34,10 +34,10 @@ P(A|B) = (P(B|A) × P(A)) / P(B)
 ```
 
 **Components**:
-- $P(A|B)$: Posterior probability
-- $P(B|A)$: Likelihood
-- $P(A)$: Prior probability
-- $P(B)$: Evidence (normalizing constant)
+- `P(A|B)`: Posterior probability
+- `P(B|A)`: Likelihood
+- `P(A)`: Prior probability
+- `P(B)`: Evidence (normalizing constant)
 
 **Use Case**: Updating beliefs with new evidence (e.g., spam detection, medical diagnosis).
 
@@ -67,8 +67,8 @@ f(x) = (1 / (σ√(2π))) × e^(-½((x-μ)/σ)²)
 ```
 
 **Parameters**:
-- $\mu$: Mean (center)
-- $\sigma$: Standard deviation (spread)
+- `μ`: Mean (center)
+- `σ`: Standard deviation (spread)
 
 **Properties**:
 - 68% of data within 1σ
@@ -92,8 +92,8 @@ P(X = k) = C(n,k) × p^k × (1-p)^(n-k)
 - n: Number of trials
 - p: Probability of success
 
-**Mean**: $\mu = np$
-**Variance**: $\sigma^2 = np(1-p)$
+**Mean**: `μ = np`
+**Variance**: `σ² = np(1-p)`
 
 **Use Cases**: Coin flips, A/B testing, quality control.
 
@@ -109,10 +109,10 @@ P(X = k) = (λ^k × e^(-λ)) / k!
 ```
 
 **Parameters**:
-- $\lambda$: Average rate of events
+- `λ`: Average rate of events
 
 **Properties**:
-- Mean = Variance = $\lambda$
+- Mean = Variance = `λ`
 - Memoryless
 
 **Use Cases**: Number of emails per hour, website visits, defects in manufacturing.
@@ -129,10 +129,10 @@ f(x) = λ × e^(-λx), for x ≥ 0
 ```
 
 **Parameters**:
-- $\lambda$: Rate parameter
+- `λ`: Rate parameter
 
-**Mean**: $\mu = \frac{1}{\lambda}$
-**Variance**: $\sigma^2 = \frac{1}{\lambda^2}$
+**Mean**: `μ = 1/λ`
+**Variance**: `σ² = 1/λ²`
 
 **Use Cases**: Time between arrivals, failure times, waiting times.
 
@@ -149,10 +149,10 @@ f(x) = λ × e^(-λx), for x ≥ 0
 X̄ ~ N(μ, σ²/n)
 ```
 
-As $n \to \infty$, where:
-- $\bar{X}$: Sample mean
-- $\mu$: Population mean
-- $\sigma^2$: Population variance
+As `n → ∞`, where:
+- `X̄`: Sample mean
+- `μ`: Population mean
+- `σ²`: Population variance
 - n: Sample size
 
 ### Key Points
@@ -160,7 +160,7 @@ As $n \to \infty$, where:
 1. **Works for any distribution**: Original distribution doesn't matter
 2. **Requires large n**: Typically n ≥ 30
 3. **Sample means are normally distributed**: Even if original data isn't
-4. **Standard error decreases**: $\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$
+4. **Standard error decreases**: `σ_X̄ = σ / √n`
 
 ### Applications
 
@@ -175,28 +175,28 @@ As $n \to \infty$, where:
 
 ### Framework
 
-**Null Hypothesis ($H_0$)**: Default assumption (e.g., no effect, no difference)
-**Alternative Hypothesis ($H_1$)**: What we want to prove
+**Null Hypothesis (`H₀`)**: Default assumption (e.g., no effect, no difference)
+**Alternative Hypothesis (`H₁`)**: What we want to prove
 
 ### Steps
 
-1. **State hypotheses**: $H_0$ and $H_1$
-2. **Choose significance level**: $\alpha$ (typically 0.05)
+1. **State hypotheses**: `H₀` and `H₁`
+2. **Choose significance level**: `α` (typically 0.05)
 3. **Collect data**: Sample from population
 4. **Calculate test statistic**: Based on data
-5. **Calculate p-value**: Probability of observing data if $H_0$ is true
-6. **Make decision**: Reject $H_0$ if p-value < $\alpha$
+5. **Calculate p-value**: Probability of observing data if `H₀` is true
+6. **Make decision**: Reject `H₀` if p-value < `α`
 
 ### Type I and Type II Errors
 
-| | Reject $H_0$ | Fail to Reject $H_0$ |
+| | Reject `H₀` | Fail to Reject `H₀` |
 |---|---|---|
-| **$H_0$ True** | Type I Error (α) | Correct |
-| **$H_0$ False** | Correct | Type II Error (β) |
+| **`H₀` True** | Type I Error (α) | Correct |
+| **`H₀` False** | Correct | Type II Error (β) |
 
-- **Type I Error (α)**: False positive - reject true $H_0$
-- **Type II Error (β)**: False negative - fail to reject false $H_0$
-- **Power (1-β)**: Probability of correctly rejecting false $H_0$
+- **Type I Error (α)**: False positive - reject true `H₀`
+- **Type II Error (β)**: False negative - fail to reject false `H₀`
+- **Power (1-β)**: Probability of correctly rejecting false `H₀`
 
 ---
 
@@ -223,16 +223,16 @@ x̄ ± t_(α/2, n-1) × (s / √n)
 ```
 
 Where:
-- $\bar{x}$: Sample mean
-- $z_{\alpha/2}$ or $t_{\alpha/2}$: Critical value
-- $s$: Sample standard deviation
-- $n$: Sample size
+- `x̄`: Sample mean
+- `z_(α/2)` or `t_(α/2)`: Critical value
+- `s`: Sample standard deviation
+- `n`: Sample size
 
 ### Common Confidence Levels
 
-- 90%: $\alpha = 0.10$
-- 95%: $\alpha = 0.05$ (most common)
-- 99%: $\alpha = 0.01$
+- 90%: `α = 0.10`
+- 95%: `α = 0.05` (most common)
+- 99%: `α = 0.01`
 
 ---
 
@@ -254,7 +254,7 @@ r = Σ((x_i - x̄)(y_i - ȳ)) / √(Σ(x_i - x̄)² × Σ(y_i - ȳ)²)
 
 **Properties**:
 - Measures linear relationship
-- Symmetric: $r_{xy} = r_{yx}$
+- Symmetric: `r_xy = r_yx`
 - Does NOT imply causation
 
 ### Causation
@@ -298,10 +298,10 @@ P(θ|X) = (P(X|θ) × P(θ)) / P(X)
 ```
 
 Where:
-- $P(\theta|X)$: Posterior (updated belief)
-- $P(X|\theta)$: Likelihood (data given parameter)
-- $P(\theta)$: Prior (initial belief)
-- $P(X)$: Evidence (normalizing constant)
+- `P(θ|X)`: Posterior (updated belief)
+- `P(X|θ)`: Likelihood (data given parameter)
+- `P(θ)`: Prior (initial belief)
+- `P(X)`: Evidence (normalizing constant)
 
 ### Advantages
 
@@ -345,8 +345,8 @@ Where:
 ```
 
 Where:
-- $O_i$: Observed frequency
-- $E_i$: Expected frequency
+- `O_i`: Observed frequency
+- `E_i`: Expected frequency
 
 **Use Cases**: Contingency tables, goodness of fit.
 
@@ -382,14 +382,14 @@ F = Between-group variance / Within-group variance
 **Definition**: Probability of observing data as extreme (or more extreme) than what we observed, assuming the null hypothesis is true.
 
 **Interpretation**:
-- **Small p-value (< 0.05)**: Unlikely data if $H_0$ is true → reject $H_0$
-- **Large p-value (> 0.05)**: Likely data if $H_0$ is true → fail to reject $H_0$
+- **Small p-value (< 0.05)**: Unlikely data if `H₀` is true → reject `H₀`
+- **Large p-value (> 0.05)**: Likely data if `H₀` is true → fail to reject `H₀`
 
 ### Common Misconceptions
 
-❌ **P-value is probability $H_0$ is true**: No, it's probability of data given $H_0$
+❌ **P-value is probability `H₀` is true**: No, it's probability of data given `H₀`
 ❌ **P-value = 0.05 means 5% chance of error**: No, it's the significance level
-❌ **P-value measures effect size**: No, it measures evidence against $H_0$
+❌ **P-value measures effect size**: No, it measures evidence against `H₀`
 
 ### Significance Levels
 
@@ -414,23 +414,23 @@ F = Between-group variance / Within-group variance
 
 ### Key Formulas
 
-**Mean**: $\bar{x} = \frac{1}{n}\sum x_i$
+**Mean**: `x̄ = (1/n) Σx_i`
 
-**Variance**: $s^2 = \frac{1}{n-1}\sum (x_i - \bar{x})^2$
+**Variance**: `s² = (1/(n-1)) Σ(x_i - x̄)²`
 
-**Standard Deviation**: $s = \sqrt{s^2}$
+**Standard Deviation**: `s = √(s²)`
 
-**Standard Error**: $SE = \frac{s}{\sqrt{n}}$
+**Standard Error**: `SE = s / √n`
 
-**Z-score**: $z = \frac{x - \mu}{\sigma}$
+**Z-score**: `z = (x - μ) / σ`
 
-**Correlation**: $r = \frac{\text{Cov}(X,Y)}{\sigma_X \sigma_Y}$
+**Correlation**: `r = Cov(X,Y) / (σ_X σ_Y)`
 
 ### Decision Rules
 
-- **Reject $H_0$**: p-value < α
-- **Fail to reject $H_0$**: p-value ≥ α
-- **95% CI doesn't contain null value**: Reject $H_0$ at α=0.05
+- **Reject `H₀`**: p-value < α
+- **Fail to reject `H₀`**: p-value ≥ α
+- **95% CI doesn't contain null value**: Reject `H₀` at α=0.05
 
 ---
 

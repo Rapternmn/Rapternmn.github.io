@@ -42,9 +42,9 @@ d(x, y) = √(Σ(i=1 to n) (x_i - y_i)²)
 ```
 
 **Properties:**
-- Symmetric: $d(x, y) = d(y, x)$
-- Non-negative: $d(x, y) \geq 0$
-- Triangle inequality: $d(x, z) \leq d(x, y) + d(y, z)$
+- Symmetric: `d(x, y) = d(y, x)`
+- Non-negative: `d(x, y) ≥ 0`
+- Triangle inequality: `d(x, z) ≤ d(x, y) + d(y, z)`
 
 ### Manhattan Distance (L1)
 
@@ -103,8 +103,8 @@ argmin_S Σ(i=1 to k) Σ(x ∈ S_i) ||x - μ_i||²
 ```
 
 Where:
-- $S_i$ = cluster $i$
-- $\mu_i$ = centroid of cluster $i$
+- `S_i` = cluster `i`
+- `μ_i` = centroid of cluster `i`
 
 ### Advantages
 
@@ -203,7 +203,7 @@ Creates a tree of clusters (dendrogram) showing relationships at different level
 
 ### Disadvantages
 
-- Computationally expensive: $O(n^3)$ or $O(n^2 \log n)$
+- Computationally expensive: `O(n³)` or `O(n² log n)`
 - Sensitive to noise and outliers
 - Difficult to handle large datasets
 - Once merged, clusters can't be split
@@ -300,10 +300,10 @@ p(x) = Σ(k=1 to K) π_k · N(x | μ_k, Σ_k)
 ```
 
 Where:
-- $\pi_k$ = mixing coefficient (weight of component $k$)
-- $\mu_k$ = mean of component $k$
-- $\Sigma_k$ = covariance matrix of component $k$
-- $\sum_{k=1}^{K} \pi_k = 1$
+- `π_k` = mixing coefficient (weight of component `k`)
+- `μ_k` = mean of component `k`
+- `Σ_k` = covariance matrix of component `k`
+- `Σ(k=1 to K) π_k = 1`
 
 ### Expectation-Maximization (EM) Algorithm
 
@@ -321,7 +321,7 @@ Where:
   π_k = N_k / N
   ```
 
-Where $N_k = \sum_{n=1}^{N} \gamma(z_{nk})$
+Where `N_k = Σ(n=1 to N) γ(z_nk)`
 
 ### Advantages
 
@@ -400,8 +400,8 @@ s(i) = (b(i) - a(i)) / max(a(i), b(i))
 ```
 
 Where:
-- $a(i)$ = average distance to points in same cluster
-- $b(i)$ = average distance to points in nearest other cluster
+- `a(i)` = average distance to points in same cluster
+- `b(i)` = average distance to points in nearest other cluster
 - Range: -1 to 1 (higher is better)
 
 **Davies-Bouldin Index:**
