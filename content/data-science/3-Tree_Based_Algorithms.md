@@ -2,7 +2,7 @@
 title = "Tree Based Algorithms"
 date = 2025-11-22T10:00:00+05:30
 draft = false
-weight = 10
+weight = 3
 description = "Comprehensive guide covering tree-based machine learning algorithms including decision trees, bagging, boosting, and ensemble methods. Covers Random Forest, XGBoost, LightGBM, CatBoost, and hyperparameter tuning."
 +++
 

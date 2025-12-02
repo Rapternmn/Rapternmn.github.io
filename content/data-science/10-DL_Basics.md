@@ -2,7 +2,7 @@
 title = "Deep Learning Basics"
 date = 2025-11-22T10:00:00+05:30
 draft = false
-weight = 4
+weight = 10
 description = "Essential deep learning concepts and techniques. Covers normalization techniques, gradient problems, transfer learning, overfitting prevention, and weight initialization."
 +++
 

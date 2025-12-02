@@ -2,7 +2,7 @@
 title = "A/B Testing & Experimental Design"
 date = 2025-11-22T10:00:00+05:30
 draft = false
-weight = 8
+weight = 11
 description = "Comprehensive guide to A/B testing, hypothesis testing, and experimental design. Covers experimental design, hypothesis testing, sample size calculation, statistical power, and multi-armed bandits."
 +++
 

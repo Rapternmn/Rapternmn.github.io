@@ -2,7 +2,7 @@
 title = "Statistics & Probability"
 date = 2025-11-22T10:00:00+05:30
 draft = false
-weight = 3
+weight = 8
 description = "Essential statistics and probability concepts. Covers probability fundamentals, distributions, central limit theorem, hypothesis testing, confidence intervals, and Bayesian statistics."
 +++
 
