@@ -6,105 +6,6 @@ weight = 2
 description = "Complete guide to Two Pointers pattern with templates in C++ and Python. Covers opposite ends, same direction, and fast-slow pointer techniques with LeetCode problem references."
 +++
 
-<style>
-/* Tab Container Styles */
-.code-tabs {
-  margin: 1.5em 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.tab-buttons {
-  display: flex;
-  background: var(--theme);
-  border-bottom: 1px solid var(--border);
-}
-
-.tab-button {
-  flex: 1;
-  padding: 12px 20px;
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid transparent;
-  cursor: pointer;
-  font-size: 0.95em;
-  font-weight: 500;
-  color: var(--secondary);
-  transition: all 0.2s ease;
-}
-
-.tab-button:hover {
-  background: var(--hljs-bg);
-  color: var(--primary);
-}
-
-.tab-button.active {
-  border-bottom-color: var(--primary);
-  color: var(--primary);
-  background: var(--hljs-bg);
-}
-
-.tab-content {
-  display: none;
-  padding: 20px;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.tab-content pre {
-  margin: 0;
-  border-radius: 0;
-}
-
-.tab-content p {
-  margin-top: 12px;
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .tab-button {
-    padding: 10px 12px;
-    font-size: 0.9em;
-  }
-  .tab-content {
-    padding: 15px;
-  }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize tabs
-  const tabContainers = document.querySelectorAll('.code-tabs');
-  
-  tabContainers.forEach(container => {
-    const buttons = container.querySelectorAll('.tab-button');
-    const contents = container.querySelectorAll('.tab-content');
-    
-    buttons.forEach((button, index) => {
-      button.addEventListener('click', () => {
-        // Remove active class from all buttons and contents
-        buttons.forEach(btn => btn.classList.remove('active'));
-        contents.forEach(content => content.classList.remove('active'));
-        
-        // Add active class to clicked button and corresponding content
-        button.classList.add('active');
-        contents[index].classList.add('active');
-      });
-    });
-    
-    // Activate first tab by default
-    if (buttons.length > 0) {
-      buttons[0].classList.add('active');
-      contents[0].classList.add('active');
-    }
-  });
-});
-</script>
-
 ---
 
 ## Introduction
@@ -162,52 +63,46 @@ One pointer moves faster than the other (covered in separate pattern file).
 
 ## Template 1: Opposite Ends Pattern
 
-<div class="code-tabs">
-  <div class="tab-buttons">
-    <button class="tab-button active">📋 C++</button>
-    <button class="tab-button">🐍 Python</button>
-  </div>
-  
-  <div class="tab-content active">
-    ```cpp
-    int left = 0;
-    int right = arr.size() - 1;
-    
-    while (left < right) {
-        // Process elements at left and right
-        if (condition) {
-            left++;
-        } else {
-            right--;
-        }
+**Key Points**:
+- Start with `left = 0` and `right = n-1`
+- Move pointers based on condition
+- Terminate when `left >= right`
+
+<details open>
+<summary><strong>📋 C++ Template</strong></summary>
+
+```cpp
+int left = 0;
+int right = arr.size() - 1;
+
+while (left < right) {
+    // Process elements at left and right
+    if (condition) {
+        left++;
+    } else {
+        right--;
     }
-    ```
-    
-    **Key Points**:
-    - Start with `left = 0` and `right = n-1`
-    - Move pointers based on condition
-    - Terminate when `left >= right`
-  </div>
-  
-  <div class="tab-content">
-    ```python
-    left = 0
-    right = len(arr) - 1
-    
-    while left < right:
-        # Process elements at left and right
-        if condition:
-            left += 1
-        else:
-            right -= 1
-    ```
-    
-    **Key Points**:
-    - Start with `left = 0` and `right = len(arr) - 1`
-    - Move pointers based on condition
-    - Terminate when `left >= right`
-  </div>
-</div>
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Template</strong></summary>
+
+```python
+left = 0
+right = len(arr) - 1
+
+while left < right:
+    # Process elements at left and right
+    if condition:
+        left += 1
+    else:
+        right -= 1
+```
+
+</details>
 
 ### Related Problems
 
@@ -227,46 +122,40 @@ One pointer moves faster than the other (covered in separate pattern file).
 
 ## Template 2: Same Direction Pattern (Slow-Fast)
 
-<div class="code-tabs">
-  <div class="tab-buttons">
-    <button class="tab-button active">📋 C++</button>
-    <button class="tab-button">🐍 Python</button>
-  </div>
-  
-  <div class="tab-content active">
-    ```cpp
-    int slow = 0;
-    for (int fast = 0; fast < arr.size(); fast++) {
-        if (condition) {
-            arr[slow] = arr[fast];
-            slow++;
-        }
+**Key Points**:
+- `slow` pointer: position to write next valid element
+- `fast` pointer: scans through entire array
+- Use for in-place modifications
+
+<details open>
+<summary><strong>📋 C++ Template</strong></summary>
+
+```cpp
+int slow = 0;
+for (int fast = 0; fast < arr.size(); fast++) {
+    if (condition) {
+        arr[slow] = arr[fast];
+        slow++;
     }
-    // Result length is 'slow'
-    ```
-    
-    **Key Points**:
-    - `slow` pointer: position to write next valid element
-    - `fast` pointer: scans through entire array
-    - Use for in-place modifications
-  </div>
-  
-  <div class="tab-content">
-    ```python
-    slow = 0
-    for fast in range(len(arr)):
-        if condition:
-            arr[slow] = arr[fast]
-            slow += 1
-    # Result length is 'slow'
-    ```
-    
-    **Key Points**:
-    - `slow` pointer: position to write next valid element
-    - `fast` pointer: scans through entire array
-    - Use for in-place modifications
-  </div>
-</div>
+}
+// Result length is 'slow'
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Template</strong></summary>
+
+```python
+slow = 0
+for fast in range(len(arr)):
+    if condition:
+        arr[slow] = arr[fast]
+        slow += 1
+# Result length is 'slow'
+```
+
+</details>
 
 ### Related Problems
 
@@ -281,94 +170,88 @@ One pointer moves faster than the other (covered in separate pattern file).
 
 ## Template 3: Two Pointers for Triplets (3Sum Pattern)
 
-<div class="code-tabs">
-  <div class="tab-buttons">
-    <button class="tab-button active">📋 C++</button>
-    <button class="tab-button">🐍 Python</button>
-  </div>
-  
-  <div class="tab-content active">
-    ```cpp
-    sort(arr.begin(), arr.end());
-    int n = arr.size();
+**Key Points**:
+- Sort array first
+- Fix one element, use two pointers for remaining
+- Important to skip duplicates
+
+<details open>
+<summary><strong>📋 C++ Template</strong></summary>
+
+```cpp
+sort(arr.begin(), arr.end());
+int n = arr.size();
+
+for (int i = 0; i < n - 2; i++) {
+    // Skip duplicates for first element
+    if (i > 0 && arr[i] == arr[i-1]) continue;
     
-    for (int i = 0; i < n - 2; i++) {
-        // Skip duplicates for first element
-        if (i > 0 && arr[i] == arr[i-1]) continue;
+    int left = i + 1;
+    int right = n - 1;
+    int target = -arr[i]; // or desired target
+    
+    while (left < right) {
+        int sum = arr[left] + arr[right];
         
-        int left = i + 1;
-        int right = n - 1;
-        int target = -arr[i]; // or desired target
-        
-        while (left < right) {
-            int sum = arr[left] + arr[right];
+        if (sum == target) {
+            // Found triplet: arr[i], arr[left], arr[right]
+            // Process result
             
-            if (sum == target) {
-                // Found triplet: arr[i], arr[left], arr[right]
-                // Process result
-                
-                // Skip duplicates
-                while (left < right && arr[left] == arr[left + 1]) left++;
-                while (left < right && arr[right] == arr[right - 1]) right--;
-                
-                left++;
-                right--;
-            } else if (sum < target) {
-                left++;
-            } else {
-                right--;
-            }
+            // Skip duplicates
+            while (left < right && arr[left] == arr[left + 1]) left++;
+            while (left < right && arr[right] == arr[right - 1]) right--;
+            
+            left++;
+            right--;
+        } else if (sum < target) {
+            left++;
+        } else {
+            right--;
         }
     }
-    ```
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Template</strong></summary>
+
+```python
+arr.sort()
+n = len(arr)
+
+for i in range(n - 2):
+    # Skip duplicates for first element
+    if i > 0 and arr[i] == arr[i-1]:
+        continue
     
-    **Key Points**:
-    - Sort array first
-    - Fix one element, use two pointers for remaining
-    - Important to skip duplicates
-  </div>
-  
-  <div class="tab-content">
-    ```python
-    arr.sort()
-    n = len(arr)
+    left = i + 1
+    right = n - 1
+    target = -arr[i]  # or desired target
     
-    for i in range(n - 2):
-        # Skip duplicates for first element
-        if i > 0 and arr[i] == arr[i-1]:
-            continue
+    while left < right:
+        current_sum = arr[left] + arr[right]
         
-        left = i + 1
-        right = n - 1
-        target = -arr[i]  # or desired target
-        
-        while left < right:
-            current_sum = arr[left] + arr[right]
+        if current_sum == target:
+            # Found triplet: arr[i], arr[left], arr[right]
+            # Process result
             
-            if current_sum == target:
-                # Found triplet: arr[i], arr[left], arr[right]
-                # Process result
-                
-                # Skip duplicates
-                while left < right and arr[left] == arr[left + 1]:
-                    left += 1
-                while left < right and arr[right] == arr[right - 1]:
-                    right -= 1
-                
+            # Skip duplicates
+            while left < right and arr[left] == arr[left + 1]:
                 left += 1
+            while left < right and arr[right] == arr[right - 1]:
                 right -= 1
-            elif current_sum < target:
-                left += 1
-            else:
-                right -= 1
-    ```
-    
-    **Key Points**:
-    - Sort array first
-    - Fix one element, use two pointers for remaining
-    - Important to skip duplicates
-  </div>
-</div>
+            
+            left += 1
+            right -= 1
+        elif current_sum < target:
+            left += 1
+        else:
+            right -= 1
+```
+
+</details>
 
 ### Related Problems
 
@@ -381,81 +264,80 @@ One pointer moves faster than the other (covered in separate pattern file).
 
 ## Template 4: Partitioning Pattern
 
-<div class="code-tabs">
-  <div class="tab-buttons">
-    <button class="tab-button active">📋 C++</button>
-    <button class="tab-button">🐍 Python</button>
-  </div>
-  
-  <div class="tab-content active">
-    ```cpp
-    int left = 0;
-    int right = arr.size() - 1;
-    
-    while (left <= right) {
-        if (arr[left] < pivot) {
-            left++;
-        } else if (arr[right] >= pivot) {
-            right--;
-        } else {
-            swap(arr[left], arr[right]);
-            left++;
-            right--;
-        }
+<details open>
+<summary><strong>📋 C++ Template</strong></summary>
+
+```cpp
+int left = 0;
+int right = arr.size() - 1;
+
+while (left <= right) {
+    if (arr[left] < pivot) {
+        left++;
+    } else if (arr[right] >= pivot) {
+        right--;
+    } else {
+        swap(arr[left], arr[right]);
+        left++;
+        right--;
     }
-    ```
-    
-    **Alternative: Three Regions (Dutch National Flag)**
-    
-    ```cpp
-    int low = 0, mid = 0, high = arr.size() - 1;
-    
-    while (mid <= high) {
-        if (arr[mid] < pivot) {
-            swap(arr[low++], arr[mid++]);
-        } else if (arr[mid] == pivot) {
-            mid++;
-        } else {
-            swap(arr[mid], arr[high--]);
-        }
+}
+```
+
+**Alternative: Three Regions (Dutch National Flag)**
+
+```cpp
+int low = 0, mid = 0, high = arr.size() - 1;
+
+while (mid <= high) {
+    if (arr[mid] < pivot) {
+        swap(arr[low++], arr[mid++]);
+    } else if (arr[mid] == pivot) {
+        mid++;
+    } else {
+        swap(arr[mid], arr[high--]);
     }
-    ```
-  </div>
-  
-  <div class="tab-content">
-    ```python
-    left = 0
-    right = len(arr) - 1
-    
-    while left <= right:
-        if arr[left] < pivot:
-            left += 1
-        elif arr[right] >= pivot:
-            right -= 1
-        else:
-            arr[left], arr[right] = arr[right], arr[left]
-            left += 1
-            right -= 1
-    ```
-    
-    **Alternative: Three Regions (Dutch National Flag)**
-    
-    ```python
-    low, mid, high = 0, 0, len(arr) - 1
-    
-    while mid <= high:
-        if arr[mid] < pivot:
-            arr[low], arr[mid] = arr[mid], arr[low]
-            low += 1
-            mid += 1
-        elif arr[mid] == pivot:
-            mid += 1
-        else:
-            arr[mid], arr[high] = arr[high], arr[mid]
-            high -= 1
-    ```
-  </div>
-</div>
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Template</strong></summary>
+
+```python
+left = 0
+right = len(arr) - 1
+
+while left <= right:
+    if arr[left] < pivot:
+        left += 1
+    elif arr[right] >= pivot:
+        right -= 1
+    else:
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
+```
+
+**Alternative: Three Regions (Dutch National Flag)**
+
+```python
+low, mid, high = 0, 0, len(arr) - 1
+
+while mid <= high:
+    if arr[mid] < pivot:
+        arr[low], arr[mid] = arr[mid], arr[low]
+        low += 1
+        mid += 1
+    elif arr[mid] == pivot:
+        mid += 1
+    else:
+        arr[mid], arr[high] = arr[high], arr[mid]
+        high -= 1
+```
+
+</details>
 
 ### Related Problems
 
@@ -468,65 +350,64 @@ One pointer moves faster than the other (covered in separate pattern file).
 
 ## Template 5: Merging Two Sorted Arrays
 
-<div class="code-tabs">
-  <div class="tab-buttons">
-    <button class="tab-button active">📋 C++</button>
-    <button class="tab-button">🐍 Python</button>
-  </div>
-  
-  <div class="tab-content active">
-    ```cpp
-    vector<int> merge(vector<int>& nums1, vector<int>& nums2) {
-        vector<int> result;
-        int i = 0, j = 0;
-        
-        while (i < nums1.size() && j < nums2.size()) {
-            if (nums1[i] <= nums2[j]) {
-                result.push_back(nums1[i++]);
-            } else {
-                result.push_back(nums2[j++]);
-            }
-        }
-        
-        // Add remaining elements
-        while (i < nums1.size()) {
+<details open>
+<summary><strong>📋 C++ Template</strong></summary>
+
+```cpp
+vector<int> merge(vector<int>& nums1, vector<int>& nums2) {
+    vector<int> result;
+    int i = 0, j = 0;
+    
+    while (i < nums1.size() && j < nums2.size()) {
+        if (nums1[i] <= nums2[j]) {
             result.push_back(nums1[i++]);
-        }
-        while (j < nums2.size()) {
+        } else {
             result.push_back(nums2[j++]);
         }
-        
-        return result;
     }
-    ```
-  </div>
-  
-  <div class="tab-content">
-    ```python
-    def merge(nums1, nums2):
-        result = []
-        i, j = 0, 0
-        
-        while i < len(nums1) and j < len(nums2):
-            if nums1[i] <= nums2[j]:
-                result.append(nums1[i])
-                i += 1
-            else:
-                result.append(nums2[j])
-                j += 1
-        
-        # Add remaining elements
-        while i < len(nums1):
+    
+    // Add remaining elements
+    while (i < nums1.size()) {
+        result.push_back(nums1[i++]);
+    }
+    while (j < nums2.size()) {
+        result.push_back(nums2[j++]);
+    }
+    
+    return result;
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Template</strong></summary>
+
+```python
+def merge(nums1, nums2):
+    result = []
+    i, j = 0, 0
+    
+    while i < len(nums1) and j < len(nums2):
+        if nums1[i] <= nums2[j]:
             result.append(nums1[i])
             i += 1
-        while j < len(nums2):
+        else:
             result.append(nums2[j])
             j += 1
-        
-        return result
-    ```
-  </div>
-</div>
+    
+    # Add remaining elements
+    while i < len(nums1):
+        result.append(nums1[i])
+        i += 1
+    while j < len(nums2):
+        result.append(nums2[j])
+        j += 1
+    
+    return result
+```
+
+</details>
 
 ### Related Problems
 
