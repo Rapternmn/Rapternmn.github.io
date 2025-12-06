@@ -1,5 +1,5 @@
 +++
-title = "Two Pointers Pattern"
+title = "Two Pointers"
 date = 2025-12-06T10:00:00+05:30
 draft = false
 weight = 2
