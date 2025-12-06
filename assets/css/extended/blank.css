@@ -20,16 +20,18 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 }
 
 /* Desktop devices (1024px and up) */
+/* Content width smaller than header (1024px) for better visual hierarchy */
 @media screen and (min-width: 1024px) {
     :root {
-        --main-width: 1000px; /* Wider for desktop */
+        --main-width: 900px; /* Smaller than header width (1024px) */
     }
 }
 
 /* Large desktop screens (1400px and up) */
+/* Slightly wider but still smaller than header */
 @media screen and (min-width: 1400px) {
     :root {
-        --main-width: 1200px; /* Even wider on large screens */
+        --main-width: 950px; /* Still smaller than header width (1024px) */
     }
 }
 
