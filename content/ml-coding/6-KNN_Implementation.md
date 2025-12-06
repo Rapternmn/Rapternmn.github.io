@@ -1,5 +1,5 @@
 +++
-title = "K-Nearest Neighbors (KNN) Implementation from Scratch"
+title = "K-Nearest Neighbors (KNN)"
 date = 2025-12-06T10:00:00+05:30
 draft = false
 weight = 6

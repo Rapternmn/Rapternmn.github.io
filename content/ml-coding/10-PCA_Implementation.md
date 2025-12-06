@@ -1,8 +1,8 @@
 +++
-title = "Principal Component Analysis (PCA) Implementation from Scratch"
+title = "Principal Component Analysis (PCA)"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 8
+weight = 10
 description = "Complete implementation of Principal Component Analysis from scratch using Python and NumPy. Covers eigenvalue decomposition, variance maximization, dimensionality reduction, and practical examples."
 +++
 

@@ -1,8 +1,8 @@
 +++
-title = "Convolutional Neural Network (CNN) Implementation from Scratch"
+title = "Convolutional Neural Network (CNN)"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 10
+weight = 12
 description = "Complete implementation of Convolutional Neural Networks from scratch using Python and NumPy. Covers convolutional layers, pooling, backpropagation through convolutions, and image classification."
 +++
 

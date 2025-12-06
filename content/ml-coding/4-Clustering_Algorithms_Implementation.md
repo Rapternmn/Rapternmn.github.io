@@ -1,5 +1,5 @@
 +++
-title = "Clustering Algorithms Implementation from Scratch"
+title = "Clustering Algorithms"
 date = 2025-12-06T10:00:00+05:30
 draft = false
 weight = 4

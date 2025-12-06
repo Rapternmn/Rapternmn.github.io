@@ -1,5 +1,5 @@
 +++
-title = "Support Vector Machines (SVM) Implementation from Scratch"
+title = "Support Vector Machines (SVM)"
 date = 2025-12-06T10:00:00+05:30
 draft = false
 weight = 7

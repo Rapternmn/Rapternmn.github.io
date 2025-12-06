@@ -1,8 +1,8 @@
 +++
-title = "RNN and LSTM Implementation from Scratch"
+title = "RNN and LSTM"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 11
+weight = 13
 description = "Complete implementation of Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) from scratch using Python and NumPy. Covers forward propagation, backpropagation through time, and sequence modeling."
 +++
 

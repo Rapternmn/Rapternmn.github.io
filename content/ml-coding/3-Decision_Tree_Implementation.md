@@ -1,5 +1,5 @@
 +++
-title = "Decision Tree Implementation from Scratch"
+title = "Decision Tree"
 date = 2025-12-06T10:00:00+05:30
 draft = false
 weight = 3

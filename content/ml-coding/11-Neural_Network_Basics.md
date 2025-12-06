@@ -1,8 +1,8 @@
 +++
-title = "Neural Network Basics Implementation from Scratch"
+title = "Neural Network Basics"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 9
+weight = 11
 description = "Complete implementation of feedforward neural networks from scratch using Python and NumPy. Covers forward propagation, backpropagation, activation functions, gradient descent, and multi-layer networks."
 +++
 
