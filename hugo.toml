@@ -18,7 +18,7 @@ canonifyURLs = true
   
   # Configure which sections appear on homepage
   # This ensures all posts from all sections show on the homepage
-  mainSections = ["deep-learning", "data-science", "nlp", "genai", "ml-coding"]
+  mainSections = ["deep-learning", "data-science", "nlp", "genai", "ml-coding", "dsa"]
   
   # Date format for posts
   DateFormat = "January 2, 2006"
@@ -94,3 +94,7 @@ canonifyURLs = true
     identifier = "ml-coding"
     name = "ML Coding"
     url = "/ml-coding/"
+  [[menu.main]]
+    identifier = "dsa"
+    name = "DSA"
+    url = "/dsa/"
