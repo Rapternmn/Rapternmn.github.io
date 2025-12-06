@@ -72,15 +72,17 @@ One pointer moves faster than the other (covered in separate pattern file).
 <summary><strong>📋 C++ Template</strong></summary>
 
 ```cpp
-int left = 0;
-int right = arr.size() - 1;
-
-while (left < right) {
-    // Process elements at left and right
-    if (condition) {
-        left++;
-    } else {
-        right--;
+void twoPointersOppositeEnds(vector<int>& arr) {
+    int left = 0;
+    int right = arr.size() - 1;
+    
+    while (left < right) {
+        // Process elements at left and right
+        if (condition) {
+            left++;
+        } else {
+            right--;
+        }
     }
 }
 ```
@@ -91,15 +93,16 @@ while (left < right) {
 <summary><strong>🐍 Python Template</strong></summary>
 
 ```python
-left = 0
-right = len(arr) - 1
-
-while left < right:
-    # Process elements at left and right
-    if condition:
-        left += 1
-    else:
-        right -= 1
+def two_pointers_opposite_ends(arr):
+    left = 0
+    right = len(arr) - 1
+    
+    while left < right:
+        # Process elements at left and right
+        if condition:
+            left += 1
+        else:
+            right -= 1
 ```
 
 </details>
@@ -131,14 +134,16 @@ while left < right:
 <summary><strong>📋 C++ Template</strong></summary>
 
 ```cpp
-int slow = 0;
-for (int fast = 0; fast < arr.size(); fast++) {
-    if (condition) {
-        arr[slow] = arr[fast];
-        slow++;
+int twoPointersSameDirection(vector<int>& arr) {
+    int slow = 0;
+    for (int fast = 0; fast < arr.size(); fast++) {
+        if (condition) {
+            arr[slow] = arr[fast];
+            slow++;
+        }
     }
+    return slow; // Result length
 }
-// Result length is 'slow'
 ```
 
 </details>
@@ -147,12 +152,13 @@ for (int fast = 0; fast < arr.size(); fast++) {
 <summary><strong>🐍 Python Template</strong></summary>
 
 ```python
-slow = 0
-for fast in range(len(arr)):
-    if condition:
-        arr[slow] = arr[fast]
-        slow += 1
-# Result length is 'slow'
+def two_pointers_same_direction(arr):
+    slow = 0
+    for fast in range(len(arr)):
+        if condition:
+            arr[slow] = arr[fast]
+            slow += 1
+    return slow  # Result length
 ```
 
 </details>
@@ -179,36 +185,40 @@ for fast in range(len(arr)):
 <summary><strong>📋 C++ Template</strong></summary>
 
 ```cpp
-sort(arr.begin(), arr.end());
-int n = arr.size();
-
-for (int i = 0; i < n - 2; i++) {
-    // Skip duplicates for first element
-    if (i > 0 && arr[i] == arr[i-1]) continue;
+vector<vector<int>> threeSum(vector<int>& arr, int target) {
+    sort(arr.begin(), arr.end());
+    int n = arr.size();
+    vector<vector<int>> result;
     
-    int left = i + 1;
-    int right = n - 1;
-    int target = -arr[i]; // or desired target
-    
-    while (left < right) {
-        int sum = arr[left] + arr[right];
+    for (int i = 0; i < n - 2; i++) {
+        // Skip duplicates for first element
+        if (i > 0 && arr[i] == arr[i-1]) continue;
         
-        if (sum == target) {
-            // Found triplet: arr[i], arr[left], arr[right]
-            // Process result
+        int left = i + 1;
+        int right = n - 1;
+        int currentTarget = target - arr[i];
+        
+        while (left < right) {
+            int sum = arr[left] + arr[right];
             
-            // Skip duplicates
-            while (left < right && arr[left] == arr[left + 1]) left++;
-            while (left < right && arr[right] == arr[right - 1]) right--;
-            
-            left++;
-            right--;
-        } else if (sum < target) {
-            left++;
-        } else {
-            right--;
+            if (sum == currentTarget) {
+                // Found triplet: arr[i], arr[left], arr[right]
+                result.push_back({arr[i], arr[left], arr[right]});
+                
+                // Skip duplicates
+                while (left < right && arr[left] == arr[left + 1]) left++;
+                while (left < right && arr[right] == arr[right - 1]) right--;
+                
+                left++;
+                right--;
+            } else if (sum < currentTarget) {
+                left++;
+            } else {
+                right--;
+            }
         }
     }
+    return result;
 }
 ```
 
@@ -218,37 +228,41 @@ for (int i = 0; i < n - 2; i++) {
 <summary><strong>🐍 Python Template</strong></summary>
 
 ```python
-arr.sort()
-n = len(arr)
-
-for i in range(n - 2):
-    # Skip duplicates for first element
-    if i > 0 and arr[i] == arr[i-1]:
-        continue
+def three_sum(arr, target):
+    arr.sort()
+    n = len(arr)
+    result = []
     
-    left = i + 1
-    right = n - 1
-    target = -arr[i]  # or desired target
-    
-    while left < right:
-        current_sum = arr[left] + arr[right]
+    for i in range(n - 2):
+        # Skip duplicates for first element
+        if i > 0 and arr[i] == arr[i-1]:
+            continue
         
-        if current_sum == target:
-            # Found triplet: arr[i], arr[left], arr[right]
-            # Process result
+        left = i + 1
+        right = n - 1
+        current_target = target - arr[i]
+        
+        while left < right:
+            current_sum = arr[left] + arr[right]
             
-            # Skip duplicates
-            while left < right and arr[left] == arr[left + 1]:
+            if current_sum == current_target:
+                # Found triplet: arr[i], arr[left], arr[right]
+                result.append([arr[i], arr[left], arr[right]])
+                
+                # Skip duplicates
+                while left < right and arr[left] == arr[left + 1]:
+                    left += 1
+                while left < right and arr[right] == arr[right - 1]:
+                    right -= 1
+                
                 left += 1
-            while left < right and arr[right] == arr[right - 1]:
                 right -= 1
-            
-            left += 1
-            right -= 1
-        elif current_sum < target:
-            left += 1
-        else:
-            right -= 1
+            elif current_sum < current_target:
+                left += 1
+            else:
+                right -= 1
+    
+    return result
 ```
 
 </details>
@@ -268,18 +282,20 @@ for i in range(n - 2):
 <summary><strong>📋 C++ Template</strong></summary>
 
 ```cpp
-int left = 0;
-int right = arr.size() - 1;
-
-while (left <= right) {
-    if (arr[left] < pivot) {
-        left++;
-    } else if (arr[right] >= pivot) {
-        right--;
-    } else {
-        swap(arr[left], arr[right]);
-        left++;
-        right--;
+void partition(vector<int>& arr, int pivot) {
+    int left = 0;
+    int right = arr.size() - 1;
+    
+    while (left <= right) {
+        if (arr[left] < pivot) {
+            left++;
+        } else if (arr[right] >= pivot) {
+            right--;
+        } else {
+            swap(arr[left], arr[right]);
+            left++;
+            right--;
+        }
     }
 }
 ```
@@ -287,15 +303,17 @@ while (left <= right) {
 **Alternative: Three Regions (Dutch National Flag)**
 
 ```cpp
-int low = 0, mid = 0, high = arr.size() - 1;
-
-while (mid <= high) {
-    if (arr[mid] < pivot) {
-        swap(arr[low++], arr[mid++]);
-    } else if (arr[mid] == pivot) {
-        mid++;
-    } else {
-        swap(arr[mid], arr[high--]);
+void partitionThreeRegions(vector<int>& arr, int pivot) {
+    int low = 0, mid = 0, high = arr.size() - 1;
+    
+    while (mid <= high) {
+        if (arr[mid] < pivot) {
+            swap(arr[low++], arr[mid++]);
+        } else if (arr[mid] == pivot) {
+            mid++;
+        } else {
+            swap(arr[mid], arr[high--]);
+        }
     }
 }
 ```
@@ -306,35 +324,37 @@ while (mid <= high) {
 <summary><strong>🐍 Python Template</strong></summary>
 
 ```python
-left = 0
-right = len(arr) - 1
-
-while left <= right:
-    if arr[left] < pivot:
-        left += 1
-    elif arr[right] >= pivot:
-        right -= 1
-    else:
-        arr[left], arr[right] = arr[right], arr[left]
-        left += 1
-        right -= 1
+def partition(arr, pivot):
+    left = 0
+    right = len(arr) - 1
+    
+    while left <= right:
+        if arr[left] < pivot:
+            left += 1
+        elif arr[right] >= pivot:
+            right -= 1
+        else:
+            arr[left], arr[right] = arr[right], arr[left]
+            left += 1
+            right -= 1
 ```
 
 **Alternative: Three Regions (Dutch National Flag)**
 
 ```python
-low, mid, high = 0, 0, len(arr) - 1
-
-while mid <= high:
-    if arr[mid] < pivot:
-        arr[low], arr[mid] = arr[mid], arr[low]
-        low += 1
-        mid += 1
-    elif arr[mid] == pivot:
-        mid += 1
-    else:
-        arr[mid], arr[high] = arr[high], arr[mid]
-        high -= 1
+def partition_three_regions(arr, pivot):
+    low, mid, high = 0, 0, len(arr) - 1
+    
+    while mid <= high:
+        if arr[mid] < pivot:
+            arr[low], arr[mid] = arr[mid], arr[low]
+            low += 1
+            mid += 1
+        elif arr[mid] == pivot:
+            mid += 1
+        else:
+            arr[mid], arr[high] = arr[high], arr[mid]
+            high -= 1
 ```
 
 </details>
