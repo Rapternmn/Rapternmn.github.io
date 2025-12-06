@@ -1,0 +1,55 @@
+/*
+This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+
+Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
+*/
+
+/* Custom CSS to increase blog post content width - Responsive Design */
+
+/* Mobile devices (default - up to 767px) */
+/* Keep default width for mobile to ensure readability */
+:root {
+    --main-width: 720px; /* Default width for mobile */
+}
+
+/* Tablet devices (768px and up) */
+@media screen and (min-width: 768px) {
+    :root {
+        --main-width: 850px; /* Slightly wider for tablets */
+    }
+}
+
+/* Desktop devices (1024px and up) */
+@media screen and (min-width: 1024px) {
+    :root {
+        --main-width: 1000px; /* Wider for desktop */
+    }
+}
+
+/* Large desktop screens (1400px and up) */
+@media screen and (min-width: 1400px) {
+    :root {
+        --main-width: 1200px; /* Even wider on large screens */
+    }
+}
+
+/* Ensure code blocks and tables can use the full width */
+.post-content {
+    max-width: 100%;
+}
+
+/* Make sure pre and code blocks don't overflow on small screens */
+pre, code {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Ensure tables are scrollable on mobile */
+@media screen and (max-width: 767px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
