@@ -1,6 +1,6 @@
 +++
 title = "Linear Regression Implementation from Scratch"
-date = 2025-01-15T10:00:00+05:30
+date = 2025-12-06T10:00:00+05:30
 draft = false
 weight = 1
 description = "Complete implementation of linear regression from scratch using Python and NumPy. Covers gradient descent, normal equation, regularization (Ridge, Lasso), feature scaling, and practical examples."

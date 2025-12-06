@@ -1,6 +1,6 @@
 +++
 title = "Decision Tree Implementation from Scratch"
-date = 2025-01-15T10:00:00+05:30
+date = 2025-12-06T10:00:00+05:30
 draft = false
 weight = 3
 description = "Complete implementation of decision trees from scratch using Python and NumPy. Covers tree building, splitting criteria (information gain, Gini impurity), handling categorical and numerical features, pruning, and practical examples."

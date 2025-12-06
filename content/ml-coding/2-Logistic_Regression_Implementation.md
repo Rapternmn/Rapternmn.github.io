@@ -1,6 +1,6 @@
 +++
 title = "Logistic Regression Implementation from Scratch"
-date = 2025-01-15T10:00:00+05:30
+date = 2025-12-06T10:00:00+05:30
 draft = false
 weight = 2
 description = "Complete implementation of logistic regression from scratch using Python and NumPy. Covers binary classification, multiclass classification, gradient descent, regularization, and practical examples with decision boundaries."
