@@ -74,6 +74,8 @@ Similar to two pointers but specifically for maintaining a window.
 - Slide window one position at a time
 - Update result based on window contents
 - Remove leftmost element, add rightmost element
+- **Time Complexity**: O(n) - single pass through array
+- **Space Complexity**: O(1) - only window sum variable
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -145,6 +147,8 @@ def fixed_size_sliding_window(arr, k):
 - Expand window by moving right pointer
 - Shrink window by moving left pointer when condition is met
 - Track result during expansion/shrinking
+- **Time Complexity**: O(n) - each element visited at most twice (once by right, once by left)
+- **Space Complexity**: O(1) - only window sum and pointers
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -214,6 +218,8 @@ def variable_size_sliding_window(arr, target):
 - Expand window and update map
 - Shrink window when condition is violated
 - Track result during valid windows
+- **Time Complexity**: O(n) - each character visited at most twice
+- **Space Complexity**: O(k) where k is number of distinct characters (at most 26 for lowercase)
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -292,6 +298,8 @@ def longest_substring_with_k_distinct(s, k):
 - Remove elements outside window from front
 - Remove smaller elements from back (for max) or larger elements (for min)
 - Front of deque always has the answer
+- **Time Complexity**: O(n) - each element added/removed from deque at most once
+- **Space Complexity**: O(k) where k is window size
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -373,6 +381,8 @@ def sliding_window_maximum(nums, k):
 - At each position, count subarrays ending at that position
 - Expand and shrink window based on condition
 - Accumulate count during valid windows
+- **Time Complexity**: O(n) - single pass through array
+- **Space Complexity**: O(1) - only window sum and pointers
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>

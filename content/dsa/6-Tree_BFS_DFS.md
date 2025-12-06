@@ -89,6 +89,8 @@ Visit left subtree, then right subtree, then root.
 - Process nodes level by level
 - Add children to queue for next level
 - Track level if needed
+- **Time Complexity**: O(n) - visit each node once
+- **Space Complexity**: O(w) where w is maximum width of tree (queue size)
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -229,6 +231,8 @@ def level_order_simple(root):
 - Visit: Root → Left → Right
 - Recursive: Process root, recurse left, recurse right
 - Iterative: Use stack, push right then left
+- **Time Complexity**: O(n) - visit each node once
+- **Space Complexity**: O(h) where h is height (recursion stack or explicit stack)
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -331,6 +335,8 @@ def preorder_iterative(root):
 - Visit: Left → Root → Right
 - Recursive: Recurse left, process root, recurse right
 - Iterative: Use stack, go left first, then process, then go right
+- **Time Complexity**: O(n) - visit each node once
+- **Space Complexity**: O(h) where h is height (recursion stack or explicit stack)
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -436,6 +442,8 @@ def inorder_iterative(root):
 - Visit: Left → Right → Root
 - Recursive: Recurse left, recurse right, process root
 - Iterative: Use two stacks or reverse preorder
+- **Time Complexity**: O(n) - visit each node once
+- **Space Complexity**: O(h) where h is height (recursion stack or explicit stack)
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -546,6 +554,8 @@ def postorder_iterative(root):
 - Backtrack when returning from recursion
 - Check conditions at leaf nodes
 - Accumulate results
+- **Time Complexity**: O(n) - visit each node once
+- **Space Complexity**: O(h) for recursion stack + O(h) for path storage = O(h)
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>

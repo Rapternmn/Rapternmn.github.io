@@ -82,6 +82,8 @@ Search for answer in a range using validity function.
 - Calculate mid without overflow: `mid = left + (right - left) / 2`
 - Compare target with mid element
 - Narrow search space based on comparison
+- **Time Complexity**: O(log n) - eliminates half the search space each iteration
+- **Space Complexity**: O(1) - only pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -215,6 +217,8 @@ right = bisect.bisect_right(arr, target)
 - For first position: when found, don't return, continue searching left
 - For last position: when found, don't return, continue searching right
 - Use separate templates for lower_bound and upper_bound
+- **Time Complexity**: O(log n) - binary search eliminates half each iteration
+- **Space Complexity**: O(1) - only pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -413,6 +417,8 @@ def search_range_bisect(arr, target):
 - Determine if target is in sorted half
 - If in sorted half, search there; otherwise search other half
 - Handle duplicates by skipping them
+- **Time Complexity**: O(log n) average, O(n) worst case with duplicates
+- **Space Complexity**: O(1) - only pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -573,6 +579,8 @@ def search_rotated_array_with_duplicates(arr, target):
 - Define a validity function to check if answer is valid
 - Binary search on the answer space
 - Find minimum/maximum valid answer
+- **Time Complexity**: O(log(max - min) × f(n)) where f(n) is validity check complexity
+- **Space Complexity**: O(1) - only pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -673,6 +681,8 @@ def ship_within_days(weights, days):
 - Treat 2D matrix as 1D array using index conversion
 - Convert 1D index to 2D: `row = index / cols`, `col = index % cols`
 - Apply standard binary search with index conversion
+- **Time Complexity**: O(log(m×n)) where m is rows and n is cols
+- **Space Complexity**: O(1) - only pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>

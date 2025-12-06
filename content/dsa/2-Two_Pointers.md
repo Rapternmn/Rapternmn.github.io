@@ -67,6 +67,8 @@ One pointer moves faster than the other (covered in separate pattern file).
 - Start with `left = 0` and `right = n-1`
 - Move pointers based on condition
 - Terminate when `left >= right`
+- **Time Complexity**: O(n) - single pass through array
+- **Space Complexity**: O(1) - only two pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -129,6 +131,8 @@ def two_pointers_opposite_ends(arr):
 - `slow` pointer: position to write next valid element
 - `fast` pointer: scans through entire array
 - Use for in-place modifications
+- **Time Complexity**: O(n) - single pass through array
+- **Space Complexity**: O(1) - only two pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -180,6 +184,8 @@ def two_pointers_same_direction(arr):
 - Sort array first
 - Fix one element, use two pointers for remaining
 - Important to skip duplicates
+- **Time Complexity**: O(n²) - O(n log n) for sorting + O(n²) for nested loops
+- **Space Complexity**: O(1) or O(n) depending on sorting algorithm
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>

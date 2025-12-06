@@ -76,6 +76,8 @@ Check if a linked list is a palindrome.
 - Slow pointer moves one step, fast pointer moves two steps
 - If there's a cycle, fast and slow will eventually meet
 - If fast reaches null, there's no cycle
+- **Time Complexity**: O(n) - fast pointer visits each node at most once
+- **Space Complexity**: O(1) - only two pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -153,6 +155,8 @@ def has_cycle(head):
 - Reset slow to head, keep fast at meeting point
 - Move both one step at a time
 - They will meet at cycle start
+- **Time Complexity**: O(n) - linear time to find cycle and cycle start
+- **Space Complexity**: O(1) - only two pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -241,6 +245,8 @@ def detect_cycle(head):
 - Slow pointer moves one step, fast pointer moves two steps
 - When fast reaches end, slow is at middle
 - Handle even/odd length lists appropriately
+- **Time Complexity**: O(n) - single pass through list
+- **Space Complexity**: O(1) - only two pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -335,6 +341,8 @@ def find_middle_first(head):
 - Reverse second half
 - Compare first half with reversed second half
 - Restore list if needed
+- **Time Complexity**: O(n) - find middle O(n), reverse O(n), compare O(n)
+- **Space Complexity**: O(1) - only pointer variables (excluding recursion stack)
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
@@ -456,6 +464,8 @@ def reverse_list(head):
 - Move fast pointer k steps ahead
 - Then move both pointers one step at a time
 - When fast reaches end, slow is at kth from end
+- **Time Complexity**: O(n) - single pass through list
+- **Space Complexity**: O(1) - only two pointer variables
 
 <details open>
 <summary><strong>📋 C++ Template</strong></summary>
