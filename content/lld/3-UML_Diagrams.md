@@ -48,8 +48,6 @@ UML provides multiple diagram types, each serving different purposes in the soft
 
 ### Example: Library Management System
 
-![Class Diagram](/images/lld/uml_class_diagram.svg)
-
 ```
 ┌─────────────────────────────────┐
 │         Book                    │
@@ -63,43 +61,45 @@ UML provides multiple diagram types, each serving different purposes in the soft
 │ + return_book()                 │
 │ + get_info(): str               │
 └─────────────────────────────────┘
-      ▲                    ▲
+      ▲                    │
       │                    │
       │ (inheritance)      │ (association)
       │                    │
-┌─────────────────────────────────┐
-│      ReferenceBook              │
-├─────────────────────────────────┤
-│ - edition: int                  │
-│ - is_reference_only: bool       │
-├─────────────────────────────────┤
-│ + can_borrow(): bool            │
-└─────────────────────────────────┘
-
-┌─────────────────────────────────┐
-│         Member                  │
-├─────────────────────────────────┤
-│ - member_id: str                │
-│ - name: str                     │
-│ - email: str                    │
-├─────────────────────────────────┤
-│ + borrow_book(book: Book)       │
-│ + return_book(book: Book)       │
-└─────────────────────────────────┘
-      │                    │
-      │ (association)      │ (association)
-      │                    │
-      ▼                    ▼
-┌─────────────────────────────────┐
-│      Library                    │
-├─────────────────────────────────┤
-│ - books: List[Book]             │
-│ - members: List[Member]         │
-├─────────────────────────────────┤
-│ + add_book(book: Book)          │
-│ + register_member(member: Member)│
-│ + search_book(title: str): Book │
-└─────────────────────────────────┘
+┌─────────────────────────────────┐ │
+│      ReferenceBook              │ │
+├─────────────────────────────────┤ │
+│ - edition: int                  │ │
+│ - is_reference_only: bool       │ │
+├─────────────────────────────────┤ │
+│ + can_borrow(): bool            │ │
+└─────────────────────────────────┘ │
+                                    │
+┌─────────────────────────────────┐ │
+│         Member                  │ │
+├─────────────────────────────────┤ │
+│ - member_id: str                │ │
+│ - name: str                     │ │
+│ - email: str                    │ │
+├─────────────────────────────────┤ │
+│ + borrow_book(book: Book)       │ │
+│ + return_book(book: Book)       │ │
+└─────────────────────────────────┘ │
+      │                             │
+      │ (association)               │
+      │                             │
+      └─────────────────────────────┘
+                      │
+                      ▼
+        ┌─────────────────────────────────┐
+        │      Library                    │
+        ├─────────────────────────────────┤
+        │ - books: List[Book]             │
+        │ - members: List[Member]         │
+        ├─────────────────────────────────┤
+        │ + add_book(book: Book)          │
+        │ + register_member(member: Member)│
+        │ + search_book(title: str): Book │
+        └─────────────────────────────────┘
 ```
 
 ### Python Implementation
@@ -211,8 +211,6 @@ class Library:
 
 ### Example: Book Borrowing Process
 
-![Sequence Diagram](/images/lld/uml_sequence_diagram.svg)
-
 ```
 Member          Library         Book
   │               │              │
@@ -283,8 +281,6 @@ class Library:
 6. **Swimlanes**: Vertical partitions (different actors/objects)
 
 ### Example: Book Return Process
-
-![Activity Diagram](/images/lld/uml_activity_diagram.svg)
 
 ```
     [Start]
@@ -382,8 +378,6 @@ class Library:
 5. **Guards**: Conditions in square brackets
 
 ### Example: Book State Machine
-
-![State Diagram](/images/lld/uml_state_diagram.svg)
 
 ```
     [Start]
@@ -491,8 +485,6 @@ class Book:
 
 ### Example: E-commerce System Components
 
-![Component Diagram](/images/lld/uml_component_diagram.svg)
-
 ```
 ┌─────────────────┐
 │  User Interface │
@@ -577,8 +569,6 @@ class InventoryService:
 5. **Include/Extend**: Dependencies between use cases
 
 ### Example: Library Management System
-
-![Use Case Diagram](/images/lld/uml_use_case_diagram.svg)
 
 ```
         ┌─────────────────────────────────────┐
