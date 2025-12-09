@@ -684,11 +684,11 @@ print(d.method())  # Output: B (first in MRO)
 
 ---
 
-## Next Steps
+<!-- ## Next Steps
 
 Now that you understand OOPs fundamentals, proceed to:
 - **[UML Diagrams]({{< ref "3-UML_Diagrams.md" >}})** - Learn to visualize your designs
-- **[SOLID Principles]({{< ref "4-SOLID_Principles.md" >}})** - Master design principles for maintainable code
+- **[SOLID Principles]({{< ref "4-SOLID_Principles.md" >}})** - Master design principles for maintainable code -->
 
 ---
 

@@ -194,10 +194,10 @@ All code examples and implementations in this guide use **Python**, which offers
 
 ---
 
-## Next Steps
+<!-- ## Next Steps
 
 Ready to begin your LLD journey? Start with:
-- **[OOPs Fundamentals]({{< ref "2-OOPs_Fundamentals.md" >}})** - Master the building blocks of object-oriented design
+- **[OOPs Fundamentals]({{< ref "2-OOPs_Fundamentals.md" >}})** - Master the building blocks of object-oriented design -->
 
 ---
 
