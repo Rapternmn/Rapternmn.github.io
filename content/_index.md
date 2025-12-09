@@ -8,11 +8,9 @@ Hi, I'm **Naman Bhayani**. I'm documenting my learning notes and insights in thi
 
 Here you'll find articles covering:
 
-- 🤖 **Deep Learning** - Neural networks, architectures, and advanced ML techniques
-- 📊 **Data Science** - Analytics, insights, and data-driven solutions  
-- 💬 **NLP** - Natural Language Processing and language understanding
+- 🤖 **Deep Learning** - Deep learning fundamentals, computer vision (CNNs), and natural language processing
+- 🎯 **Machine Learning** - ML fundamentals, data science, statistics, and hands-on ML coding implementations
 - ✨ **GenAI** - Generative AI, LLMs, and AI-powered content creation
-- 💻 **ML Coding** - Hands-on implementations of core machine learning algorithms from scratch
 - 🧩 **DSA** - Data Structures and Algorithms coding patterns, problem-solving techniques, and interview preparation
 - 🏗️ **LLD** - Low Level Design: OOPs principles, Design Patterns, and practical case studies in Python
 

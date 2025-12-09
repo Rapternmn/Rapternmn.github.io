@@ -1,4 +1,4 @@
 +++
 title = "Deep Learning"
-description = "Comprehensive guides on deep learning, neural networks, and advanced machine learning techniques. Covers activation functions, loss functions, DNNs, CNNs, RNNs, and modern architectures."
+description = "Comprehensive guides on deep learning: fundamentals (loss functions, activation, DNN, RNN), computer vision (CNNs), and natural language processing (NLP, transformers, BERT, GPT)."
 +++
