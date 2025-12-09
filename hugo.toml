@@ -75,14 +75,14 @@ canonifyURLs = true
 
 [menu]
   [[menu.main]]
-    identifier = "deep-learning"
-    name = "Deep Learning"
-    url = "/deep-learning/"
-    weight = 1
-  [[menu.main]]
     identifier = "machine-learning"
     name = "Machine Learning"
     url = "/machine-learning/"
+    weight = 1
+  [[menu.main]]
+    identifier = "deep-learning"
+    name = "Deep Learning"
+    url = "/deep-learning/"
     weight = 2
   [[menu.main]]
     identifier = "genai"
