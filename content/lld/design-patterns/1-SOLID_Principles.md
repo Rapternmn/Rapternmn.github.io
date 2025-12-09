@@ -2,7 +2,7 @@
 title = "SOLID Principles"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 4
+weight = 1
 description = "Comprehensive guide to SOLID principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion with Python examples and best practices."
 +++
 

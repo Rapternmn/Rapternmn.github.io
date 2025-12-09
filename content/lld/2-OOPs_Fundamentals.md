@@ -623,7 +623,8 @@ print(temp.celsius)  # Output: 37.77777777777778
 Magic methods (also called dunder methods because they're surrounded by double underscores) allow you to define how objects of your class behave with built-in Python operations. They enable operator overloading and integration with Python's built-in functions.
 
 Common magic methods include:
-- `__init__`: Constructor
+- `__new__`: Object creation (called before `__init__`, used for singletons, immutable types)
+- `__init__`: Constructor (initializes the instance)
 - `__str__`: String representation for users (`str()` and `print()`)
 - `__repr__`: String representation for developers (used by debuggers)
 - `__len__`: Define length (`len()`)

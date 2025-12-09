@@ -78,27 +78,34 @@ canonifyURLs = true
     identifier = "deep-learning"
     name = "Deep Learning"
     url = "/deep-learning/"
+    weight = 1
   [[menu.main]]
     identifier = "data-science"
     name = "Data Science"
     url = "/data-science/"
+    weight = 2
   [[menu.main]]
     identifier = "nlp"
     name = "NLP"
     url = "/nlp/"
+    weight = 3
   [[menu.main]]
     identifier = "genai"
     name = "GenAI"
     url = "/genai/"
+    weight = 4
   [[menu.main]]
     identifier = "ml-coding"
     name = "ML Coding"
     url = "/ml-coding/"
+    weight = 5
   [[menu.main]]
     identifier = "dsa"
     name = "DSA"
     url = "/dsa/"
+    weight = 6
   [[menu.main]]
     identifier = "lld"
     name = "LLD"
     url = "/lld/"
+    weight = 7
