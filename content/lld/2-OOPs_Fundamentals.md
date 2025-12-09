@@ -514,7 +514,17 @@ for processor in processors:
 
 ## Python-Specific OOPs Features
 
+Python extends traditional OOPs concepts with several powerful features that make object-oriented programming more flexible and expressive.
+
 ### 1. Class Methods and Static Methods
+
+Python provides three types of methods: **instance methods**, **class methods**, and **static methods**.
+
+- **Instance Methods**: The most common type. They take `self` as the first parameter and operate on instance data. They can access both instance variables and class variables.
+
+- **Class Methods**: Defined using the `@classmethod` decorator. They take `cls` (the class itself) as the first parameter instead of `self`. Class methods can access and modify class variables and are often used as alternative constructors or for operations that don't need a specific instance.
+
+- **Static Methods**: Defined using the `@staticmethod` decorator. They don't take `self` or `cls` as parameters. Static methods are utility functions that are logically related to the class but don't need access to instance or class data. They can be called on the class or an instance.
 
 ```python
 class Employee:
@@ -561,6 +571,15 @@ print(Employee.is_workday(date.today()))  # Static method
 
 ### 2. Property Decorators
 
+The `@property` decorator allows you to define methods that can be accessed like attributes, providing a Pythonic way to implement getters and setters. This enables:
+
+- **Computed attributes**: Properties that are calculated on-the-fly
+- **Validation**: Setters can validate data before assignment
+- **Encapsulation**: Control access to private attributes while maintaining a clean API
+- **Backward compatibility**: Change internal implementation without breaking existing code
+
+Properties make the interface cleaner by allowing you to use `obj.attribute` syntax instead of `obj.get_attribute()` and `obj.set_attribute()` methods.
+
 ```python
 class Temperature:
     """Demonstrates property decorators for getters and setters"""
@@ -600,6 +619,17 @@ print(temp.celsius)  # Output: 37.77777777777778
 ```
 
 ### 3. Magic Methods (Dunder Methods)
+
+Magic methods (also called dunder methods because they're surrounded by double underscores) allow you to define how objects of your class behave with built-in Python operations. They enable operator overloading and integration with Python's built-in functions.
+
+Common magic methods include:
+- `__init__`: Constructor
+- `__str__`: String representation for users (`str()` and `print()`)
+- `__repr__`: String representation for developers (used by debuggers)
+- `__len__`: Define length (`len()`)
+- `__eq__`, `__lt__`, `__gt__`: Comparison operators (`==`, `<`, `>`)
+- `__add__`, `__sub__`: Arithmetic operators (`+`, `-`)
+- `__getitem__`, `__setitem__`: Indexing (`obj[key]`)
 
 ```python
 class Book:
@@ -645,6 +675,16 @@ print(book1 < book2)  # Output: False
 ```
 
 ### 4. Multiple Inheritance and MRO
+
+Python supports **multiple inheritance**, where a class can inherit from multiple parent classes. This is powerful but can lead to the "diamond problem" when methods are defined in multiple parent classes.
+
+**Method Resolution Order (MRO)** is the algorithm Python uses to determine which method to call when multiple inheritance is involved. Python uses the C3 linearization algorithm to create a consistent order. You can inspect the MRO using `Class.__mro__` or `Class.mro()`.
+
+The MRO ensures that:
+- Methods are searched in a predictable order
+- Each class appears only once in the inheritance chain
+- Subclasses come before their parent classes
+- The order respects the order of base classes in the class definition
 
 ```python
 class A:
