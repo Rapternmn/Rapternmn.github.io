@@ -22,6 +22,8 @@ This guide covers the four pillars of OOPs:
 
 ## Classes and Objects
 
+![Class and Object Relationship](/images/lld/class_object.svg)
+
 ### What is a Class?
 
 A **class** is a blueprint or template for creating objects. It defines:
@@ -76,6 +78,8 @@ print(car1.accelerate(20))  # Output: Speed increased to 20 km/h
 ---
 
 ## Encapsulation
+
+![Encapsulation Concept](/images/lld/encapsulation_concept.svg)
 
 **Encapsulation** is the bundling of data and methods that operate on that data within a single unit (class), while restricting access to some components. It's about data hiding and access control.
 
@@ -157,6 +161,8 @@ account._owner_name = "John Doe"  # Convention suggests this is for internal use
 ---
 
 ## Inheritance
+
+![Inheritance Hierarchy](/images/lld/inheritance_hierarchy.svg)
 
 **Inheritance** allows a class (child/derived class) to inherit attributes and methods from another class (parent/base class). It promotes code reuse and establishes an "is-a" relationship.
 
@@ -270,6 +276,8 @@ print(duck.quack())  # From Duck itself
 ---
 
 ## Polymorphism
+
+![Polymorphism Concept](/images/lld/polymorphism_concept.svg)
 
 **Polymorphism** means "many forms". It allows objects of different classes to be treated as objects of a common base class. There are two types:
 
@@ -385,6 +393,8 @@ print(make_it_speak(Robot()))  # Output: Beep boop!
 ---
 
 ## Abstraction
+
+![Abstraction Concept](/images/lld/abstraction_concept.svg)
 
 **Abstraction** is the process of hiding complex implementation details and showing only essential features. It focuses on "what" rather than "how".
 

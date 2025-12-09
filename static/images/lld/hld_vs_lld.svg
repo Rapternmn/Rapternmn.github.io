@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#fafafa"/>
+  <text x="300" y="30" font-size="22" font-weight="bold" text-anchor="middle">HLD vs LLD</text>
+  
+  <!-- HLD Section -->
+  <rect x="50" y="60" width="240" height="300" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="10"/>
+  <text x="170" y="90" font-size="18" font-weight="bold" text-anchor="middle" fill="#1b5e20">High Level Design</text>
+  <text x="70" y="120" font-size="14" font-weight="bold" fill="#2e7d32">Scope:</text>
+  <text x="80" y="140" font-size="12" fill="#333">System Architecture</text>
+  <text x="70" y="170" font-size="14" font-weight="bold" fill="#2e7d32">Focus:</text>
+  <text x="80" y="190" font-size="12" fill="#333">• Components</text>
+  <text x="80" y="210" font-size="12" fill="#333">• Interactions</text>
+  <text x="80" y="230" font-size="12" fill="#333">• System Flow</text>
+  <text x="70" y="260" font-size="14" font-weight="bold" fill="#2e7d32">Diagrams:</text>
+  <text x="80" y="280" font-size="12" fill="#333">• Architecture</text>
+  <text x="80" y="300" font-size="12" fill="#333">• Deployment</text>
+  <text x="70" y="330" font-size="14" font-weight="bold" fill="#2e7d32">Example:</text>
+  <text x="80" y="350" font-size="12" fill="#333">Microservices, DBs</text>
+  
+  <!-- LLD Section -->
+  <rect x="310" y="60" width="240" height="300" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="10"/>
+  <text x="430" y="90" font-size="18" font-weight="bold" text-anchor="middle" fill="#bf360c">Low Level Design</text>
+  <text x="330" y="120" font-size="14" font-weight="bold" fill="#e65100">Scope:</text>
+  <text x="340" y="140" font-size="12" fill="#333">Component/Module</text>
+  <text x="330" y="170" font-size="14" font-weight="bold" fill="#e65100">Focus:</text>
+  <text x="340" y="190" font-size="12" fill="#333">• Classes</text>
+  <text x="340" y="210" font-size="12" fill="#333">• Methods</text>
+  <text x="340" y="230" font-size="12" fill="#333">• Data Structures</text>
+  <text x="330" y="260" font-size="14" font-weight="bold" fill="#e65100">Diagrams:</text>
+  <text x="340" y="280" font-size="12" fill="#333">• Class Diagram</text>
+  <text x="340" y="300" font-size="12" fill="#333">• Sequence</text>
+  <text x="330" y="330" font-size="14" font-weight="bold" fill="#e65100">Example:</text>
+  <text x="340" y="350" font-size="12" fill="#333">ParkingLot class</text>
+</svg>
+

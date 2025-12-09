@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <rect width="500" height="300" fill="#f9f9f9"/>
+  <text x="250" y="30" font-size="20" font-weight="bold" text-anchor="middle">Class vs Object</text>
+  
+  <!-- Class -->
+  <rect x="50" y="60" width="180" height="200" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+  <text x="140" y="85" font-size="16" font-weight="bold" text-anchor="middle">Class: Car</text>
+  <line x1="60" y1="95" x2="220" y2="95" stroke="#1976d2" stroke-width="1"/>
+  <text x="70" y="120" font-size="12" fill="#333">Attributes:</text>
+  <text x="80" y="140" font-size="11" fill="#666">- brand</text>
+  <text x="80" y="155" font-size="11" fill="#666">- model</text>
+  <text x="80" y="170" font-size="11" fill="#666">- year</text>
+  <text x="80" y="185" font-size="11" fill="#666">- speed</text>
+  <text x="70" y="210" font-size="12" fill="#333">Methods:</text>
+  <text x="80" y="230" font-size="11" fill="#666">- start()</text>
+  <text x="80" y="245" font-size="11" fill="#666">- accelerate()</text>
+  
+  <!-- Arrow -->
+  <path d="M 240 160 L 270 160" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Objects -->
+  <rect x="280" y="60" width="90" height="90" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="325" y="85" font-size="14" font-weight="bold" text-anchor="middle">Object 1</text>
+  <text x="290" y="105" font-size="10" fill="#333">car1:</text>
+  <text x="295" y="120" font-size="9" fill="#666">Toyota</text>
+  <text x="295" y="135" font-size="9" fill="#666">Camry 2023</text>
+  
+  <rect x="280" y="170" width="90" height="90" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="325" y="195" font-size="14" font-weight="bold" text-anchor="middle">Object 2</text>
+  <text x="290" y="215" font-size="10" fill="#333">car2:</text>
+  <text x="295" y="230" font-size="9" fill="#666">Honda</text>
+  <text x="295" y="245" font-size="9" fill="#666">Civic 2022</text>
+  
+  <text x="250" y="280" font-size="12" text-anchor="middle" fill="#666">Class is a blueprint, Objects are instances</text>
+</svg>
+

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350">
+  <rect width="500" height="350" fill="#f9f9f9"/>
+  <text x="250" y="30" font-size="20" font-weight="bold" text-anchor="middle">Abstraction - Hide Complexity</text>
+  
+  <!-- Abstract class -->
+  <rect x="150" y="60" width="200" height="100" fill="#e1f5fe" stroke="#0277bd" stroke-width="3" stroke-dasharray="5,5" rx="5"/>
+  <text x="250" y="85" font-size="16" font-weight="bold" text-anchor="middle">Shape (Abstract)</text>
+  <text x="160" y="110" font-size="12" fill="#333">@abstractmethod</text>
+  <text x="160" y="130" font-size="11" fill="#666">+ area() - abstract</text>
+  <text x="160" y="145" font-size="11" fill="#666">+ perimeter() - abstract</text>
+  
+  <!-- Concrete implementations -->
+  <rect x="50" y="200" width="150" height="120" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="125" y="225" font-size="14" font-weight="bold" text-anchor="middle">Rectangle</text>
+  <text x="60" y="250" font-size="11" fill="#333">area() → w × h</text>
+  <text x="60" y="270" font-size="11" fill="#333">perimeter() → 2(w+h)</text>
+  <text x="60" y="290" font-size="10" fill="#666">Concrete implementation</text>
+  <text x="60" y="305" font-size="10" fill="#666">Hides calculation details</text>
+  
+  <rect x="300" y="200" width="150" height="120" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="375" y="225" font-size="14" font-weight="bold" text-anchor="middle">Circle</text>
+  <text x="310" y="250" font-size="11" fill="#333">area() → πr²</text>
+  <text x="310" y="270" font-size="11" fill="#333">perimeter() → 2πr</text>
+  <text x="310" y="290" font-size="10" fill="#666">Concrete implementation</text>
+  <text x="310" y="305" font-size="10" fill="#666">Hides calculation details</text>
+  
+  <!-- User perspective -->
+  <rect x="100" y="330" width="300" height="15" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="250" y="341" font-size="11" text-anchor="middle" fill="#1b5e20">User only sees: shape.area() - complexity hidden</text>
+</svg>
+

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350">
+  <rect width="500" height="350" fill="#f9f9f9"/>
+  <text x="250" y="30" font-size="20" font-weight="bold" text-anchor="middle">Inheritance Hierarchy</text>
+  
+  <!-- Parent Class -->
+  <rect x="175" y="60" width="150" height="80" fill="#e1f5fe" stroke="#0277bd" stroke-width="2" rx="5"/>
+  <text x="250" y="85" font-size="16" font-weight="bold" text-anchor="middle">Vehicle</text>
+  <text x="190" y="105" font-size="11" fill="#333">+ brand: String</text>
+  <text x="190" y="120" font-size="11" fill="#333">+ model: String</text>
+  <text x="190" y="135" font-size="11" fill="#333">+ start()</text>
+  
+  <!-- Inheritance arrows -->
+  <line x1="200" y1="140" x2="150" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="140" x2="350" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Child Classes -->
+  <rect x="50" y="200" width="200" height="100" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="150" y="225" font-size="14" font-weight="bold" text-anchor="middle">Car</text>
+  <text x="60" y="245" font-size="11" fill="#333">+ num_doors: int</text>
+  <text x="60" y="260" font-size="11" fill="#333">+ honk()</text>
+  <text x="60" y="275" font-size="11" fill="#333">(inherits from Vehicle)</text>
+  <text x="60" y="290" font-size="10" fill="#666">Inherits: brand, model, start()</text>
+  
+  <rect x="250" y="200" width="200" height="100" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="350" y="225" font-size="14" font-weight="bold" text-anchor="middle">Motorcycle</text>
+  <text x="260" y="245" font-size="11" fill="#333">+ engine_cc: int</text>
+  <text x="260" y="260" font-size="11" fill="#333">+ wheelie()</text>
+  <text x="260" y="275" font-size="11" fill="#333">(inherits from Vehicle)</text>
+  <text x="260" y="290" font-size="10" fill="#666">Inherits: brand, model, start()</text>
+</svg>
+

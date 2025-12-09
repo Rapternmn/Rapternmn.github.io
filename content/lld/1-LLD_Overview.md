@@ -37,6 +37,8 @@ LLD bridges the gap between high-level system architecture and actual code imple
 
 ## LLD vs HLD (High Level Design)
 
+![HLD vs LLD Comparison](/images/lld/hld_vs_lld.svg)
+
 Understanding the difference between LLD and HLD is crucial:
 
 ### High Level Design (HLD)
@@ -69,6 +71,8 @@ Understanding the difference between LLD and HLD is crucial:
 ---
 
 ## Key Concepts in LLD
+
+![OOPs Four Pillars](/images/lld/oops_pillars.svg)
 
 ### 1. Object-Oriented Programming (OOPs)
 - **Classes and Objects**: Blueprint and instances
