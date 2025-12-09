@@ -2,7 +2,7 @@
 title = "Convolutional Neural Networks (CNN): Architectures & Algorithms"
 date = 2025-11-22T11:00:00+05:30
 draft = false
-weight = 5
+weight = 1
 description = "Comprehensive guide to Convolutional Neural Networks covering convolution operations, pooling, classic architectures (LeNet, AlexNet, VGG), modern architectures (ResNet, Inception, DenseNet, MobileNet), and advanced techniques for image processing."
 +++
 
