@@ -21,4 +21,5 @@ This section covers Data Engineering concepts essential for building scalable, r
 - **[Orchestration & Workflow]({{< ref "9-Orchestration_Workflow.md" >}})** - Workflow orchestration, Apache Airflow, dependency management, and task scheduling
 - **[Distributed Data Systems]({{< ref "10-Distributed_Data_Systems.md" >}})** - Distributed storage, consistency models, CAP theorem, partitioning, and replication
 - **[Data Engineering Case Studies]({{< ref "11-Data_Engineering_Case_Studies.md" >}})** - Real-world system designs including real-time analytics, ML data pipelines, and data warehouse design
+- **[Advanced SQL]({{< ref "12-Advanced_SQL.md" >}})** - Window functions, CTEs, complex joins, subqueries, query optimization, and advanced SQL techniques
 
