@@ -2,7 +2,7 @@
 title = "UML Diagrams"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 3
+weight = 2
 description = "Comprehensive guide to UML diagrams: Class, Sequence, Activity, State, Component, and Use Case diagrams with examples and best practices for Low Level Design."
 +++
 

@@ -2,7 +2,7 @@
 title = "OOPs Fundamentals"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 2
+weight = 1
 description = "Comprehensive guide to Object-Oriented Programming fundamentals: Classes, Objects, Encapsulation, Inheritance, Polymorphism, and Abstraction with Python examples and best practices."
 +++
 

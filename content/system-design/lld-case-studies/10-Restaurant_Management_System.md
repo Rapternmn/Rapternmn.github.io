@@ -2,7 +2,7 @@
 title = "Restaurant Management System"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 8
+weight = 10
 description = "Complete implementation of Restaurant Management System: Order management, table management, kitchen workflow, and payment processing."
 +++
 

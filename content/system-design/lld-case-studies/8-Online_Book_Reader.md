@@ -2,7 +2,7 @@
 title = "Online Book Reader"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 6
+weight = 8
 description = "Complete implementation of Online Book Reader: Book storage, reading progress tracking, user management, bookmarking, and reading history."
 +++
 

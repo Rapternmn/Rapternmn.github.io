@@ -2,7 +2,7 @@
 title = "Car Rental System"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 7
+weight = 9
 description = "Complete implementation of Car Rental System: Vehicle inventory, booking management, payment processing, and rental tracking."
 +++
 

@@ -2,7 +2,7 @@
 title = "Library Management System"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 5
+weight = 7
 description = "Complete implementation of Library Management System: Book management, member management, borrowing and returning books, fine calculation, using Observer pattern and CRUD operations."
 +++
 

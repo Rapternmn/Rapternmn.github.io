@@ -2,7 +2,7 @@
 title = "Tic Tac Toe"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 10
+weight = 12
 description = "Complete implementation of Tic Tac Toe: Game board, move validation, win condition checking, and player management."
 +++
 

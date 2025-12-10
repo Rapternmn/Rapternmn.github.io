@@ -2,7 +2,7 @@
 title = "LLD Case Studies Overview"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 1
+weight = 3
 description = "Introduction to LLD Case Studies: Common Low Level Design problems in interviews, problem-solving approach, design methodology, and overview of practical system implementations."
 +++
 

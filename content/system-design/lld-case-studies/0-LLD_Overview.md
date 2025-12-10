@@ -2,7 +2,7 @@
 title = "LLD Overview"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 1
+weight = 0
 description = "Introduction to Low Level Design (LLD): Understanding the fundamentals, differences between LLD and HLD, key concepts, interview expectations, and a comprehensive roadmap for mastering system design."
 +++
 

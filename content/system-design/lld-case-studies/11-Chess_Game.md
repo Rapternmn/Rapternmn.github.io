@@ -2,7 +2,7 @@
 title = "Chess Game"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 9
+weight = 11
 description = "Complete implementation of Chess Game: Game board, piece movement, move validation, check/checkmate detection, and game state management."
 +++
 

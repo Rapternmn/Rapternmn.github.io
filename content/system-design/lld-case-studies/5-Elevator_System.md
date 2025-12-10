@@ -2,7 +2,7 @@
 title = "Elevator System"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 3
+weight = 5
 description = "Complete implementation of Elevator System: Multiple elevators, floor requests, scheduling algorithms, state management using State pattern, and elevator control logic."
 +++
 

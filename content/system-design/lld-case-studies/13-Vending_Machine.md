@@ -2,7 +2,7 @@
 title = "Vending Machine"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 11
+weight = 13
 description = "Complete implementation of Vending Machine: Product inventory, payment processing, change dispensing, and state management using State pattern."
 +++
 

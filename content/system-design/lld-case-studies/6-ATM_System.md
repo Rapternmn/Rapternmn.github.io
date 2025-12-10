@@ -2,7 +2,7 @@
 title = "ATM System"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 4
+weight = 6
 description = "Complete implementation of ATM System: Card authentication, transaction processing, cash dispensing, account management using State pattern and transaction handling."
 +++
 

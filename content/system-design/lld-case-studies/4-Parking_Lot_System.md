@@ -2,7 +2,7 @@
 title = "Parking Lot System"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 2
+weight = 4
 description = "Complete implementation of Parking Lot System: Multi-level parking with different vehicle types, spot allocation, payment processing, using Factory pattern, Strategy pattern, and SOLID principles."
 +++
 
