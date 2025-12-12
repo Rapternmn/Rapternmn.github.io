@@ -269,6 +269,8 @@ def isPalindrome(s):
     return True
 ```
 
+</details>
+
 **Time**: O(n) | **Space**: O(1)
 
 **Related**: [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
@@ -326,6 +328,8 @@ def lengthOfLongestSubstring(s):
     
     return max_len
 ```
+
+</details>
 
 **Time**: O(n) | **Space**: O(min(n, m)) where m is charset size
 
@@ -406,6 +410,34 @@ def isAnagram(s, t):
 **Problem**: Group strings that are anagrams of each other.
 
 **Solution**:
+
+<details open>
+<summary><strong>📋 C++ Solution</strong></summary>
+
+```cpp
+vector<vector<string>> groupAnagrams(vector<string>& strs) {
+    unordered_map<string, vector<string>> anagramMap;
+    
+    for (const string& s : strs) {
+        string key = s;
+        sort(key.begin(), key.end());
+        anagramMap[key].push_back(s);
+    }
+    
+    vector<vector<string>> result;
+    for (auto& pair : anagramMap) {
+        result.push_back(pair.second);
+    }
+    
+    return result;
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Solution</strong></summary>
+
 ```python
 def groupAnagrams(strs):
     from collections import defaultdict
@@ -419,6 +451,8 @@ def groupAnagrams(strs):
     return list(anagram_map.values())
 ```
 
+</details>
+
 **Time**: O(n * k log k) where k is max string length | **Space**: O(n * k)
 
 **Related**: [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
@@ -430,6 +464,47 @@ def groupAnagrams(strs):
 **Problem**: Find longest palindromic substring.
 
 **Solution** (Expand Around Centers):
+
+<details open>
+<summary><strong>📋 C++ Solution</strong></summary>
+
+```cpp
+string longestPalindrome(string s) {
+    int n = s.length();
+    if (n == 0) return "";
+    
+    int start = 0, maxLen = 1;
+    
+    auto expandAroundCenter = [&](int left, int right) -> int {
+        while (left >= 0 && right < n && s[left] == s[right]) {
+            left--;
+            right++;
+        }
+        return right - left - 1;
+    };
+    
+    for (int i = 0; i < n; i++) {
+        // Odd length palindromes (center at i)
+        int len1 = expandAroundCenter(i, i);
+        // Even length palindromes (center between i and i+1)
+        int len2 = expandAroundCenter(i, i + 1);
+        
+        int len = max(len1, len2);
+        if (len > maxLen) {
+            maxLen = len;
+            start = i - (len - 1) / 2;
+        }
+    }
+    
+    return s.substr(start, maxLen);
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Solution</strong></summary>
+
 ```python
 def longestPalindrome(s):
     def expand_around_center(left, right):
@@ -450,6 +525,8 @@ def longestPalindrome(s):
     return longest
 ```
 
+</details>
+
 **Time**: O(n²) | **Space**: O(1)
 
 **Related**: [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
@@ -461,6 +538,66 @@ def longestPalindrome(s):
 **Problem**: Find minimum window in s containing all characters of t.
 
 **Solution**:
+
+<details open>
+<summary><strong>📋 C++ Solution</strong></summary>
+
+```cpp
+string minWindow(string s, string t) {
+    if (s.empty() || t.empty() || s.length() < t.length()) {
+        return "";
+    }
+    
+    unordered_map<char, int> need;
+    for (char c : t) {
+        need[c]++;
+    }
+    
+    int missing = t.length();
+    int left = 0, start = 0, end = 0;
+    
+    for (int right = 0; right < s.length(); right++) {
+        char c = s[right];
+        
+        if (need.find(c) != need.end()) {
+            if (need[c] > 0) {
+                missing--;
+            }
+            need[c]--;
+        }
+        
+        if (missing == 0) {
+            // Try to shrink window from left
+            while (left <= right) {
+                char leftChar = s[left];
+                if (need.find(leftChar) != need.end()) {
+                    if (need[leftChar] < 0) {
+                        need[leftChar]++;
+                        left++;
+                    } else {
+                        break;
+                    }
+                } else {
+                    left++;
+                }
+            }
+            
+            if (end == 0 || right - left < end - start) {
+                start = left;
+                end = right + 1;
+            }
+        }
+    }
+    
+    return s.substr(start, end - start);
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Solution</strong></summary>
+
 ```python
 def minWindow(s, t):
     from collections import Counter
@@ -485,6 +622,8 @@ def minWindow(s, t):
     return s[start:end]
 ```
 
+</details>
+
 **Time**: O(|s| + |t|) | **Space**: O(|s| + |t|)
 
 **Related**: [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
@@ -498,6 +637,39 @@ def minWindow(s, t):
 **Problem**: Check if string has valid parentheses.
 
 **Solution**:
+
+<details open>
+<summary><strong>📋 C++ Solution</strong></summary>
+
+```cpp
+bool isValid(string s) {
+    stack<char> st;
+    unordered_map<char, char> mapping = {
+        {')', '('},
+        {'}', '{'},
+        {']', '['}
+    };
+    
+    for (char c : s) {
+        if (mapping.find(c) != mapping.end()) {
+            if (st.empty() || st.top() != mapping[c]) {
+                return false;
+            }
+            st.pop();
+        } else {
+            st.push(c);
+        }
+    }
+    
+    return st.empty();
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Solution</strong></summary>
+
 ```python
 def isValid(s):
     stack = []
@@ -512,6 +684,8 @@ def isValid(s):
     
     return len(stack) == 0
 ```
+
+</details>
 
 **Time**: O(n) | **Space**: O(n)
 
