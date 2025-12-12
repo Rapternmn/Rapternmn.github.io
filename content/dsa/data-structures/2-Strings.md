@@ -526,6 +526,68 @@ def isValid(s):
 **Problem**: Reverse order of words in string.
 
 **Solution**:
+
+<details open>
+<summary><strong>📋 C++ Solution</strong></summary>
+
+```cpp
+string reverseWords(string s) {
+    stringstream ss(s);
+    string word;
+    vector<string> words;
+    
+    while (ss >> word) {
+        words.push_back(word);
+    }
+    
+    reverse(words.begin(), words.end());
+    
+    string result;
+    for (int i = 0; i < words.size(); i++) {
+        if (i > 0) result += " ";
+        result += words[i];
+    }
+    
+    return result;
+}
+
+// Without stringstream - manual parsing
+string reverseWords(string s) {
+    vector<string> words;
+    string word;
+    
+    for (char c : s) {
+        if (c == ' ') {
+            if (!word.empty()) {
+                words.push_back(word);
+                word = "";
+            }
+        } else {
+            word += c;
+        }
+    }
+    
+    if (!word.empty()) {
+        words.push_back(word);
+    }
+    
+    reverse(words.begin(), words.end());
+    
+    string result;
+    for (int i = 0; i < words.size(); i++) {
+        if (i > 0) result += " ";
+        result += words[i];
+    }
+    
+    return result;
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Solution</strong></summary>
+
 ```python
 def reverseWords(s):
     words = s.split()
@@ -550,6 +612,8 @@ def reverseWords(s):
     return ' '.join(reversed(result))
 ```
 
+</details>
+
 **Time**: O(n) | **Space**: O(n)
 
 **Related**: [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)
@@ -561,6 +625,55 @@ def reverseWords(s):
 **Problem**: Convert string to integer (handle edge cases).
 
 **Solution**:
+
+<details open>
+<summary><strong>📋 C++ Solution</strong></summary>
+
+```cpp
+int myAtoi(string s) {
+    int i = 0;
+    int n = s.length();
+    
+    // Skip whitespace
+    while (i < n && s[i] == ' ') {
+        i++;
+    }
+    
+    if (i == n) return 0;
+    
+    // Handle sign
+    int sign = 1;
+    if (s[i] == '-') {
+        sign = -1;
+        i++;
+    } else if (s[i] == '+') {
+        i++;
+    }
+    
+    long long result = 0;
+    while (i < n && isdigit(s[i])) {
+        result = result * 10 + (s[i] - '0');
+        
+        // Check for overflow
+        if (sign * result > INT_MAX) {
+            return INT_MAX;
+        }
+        if (sign * result < INT_MIN) {
+            return INT_MIN;
+        }
+        
+        i++;
+    }
+    
+    return sign * result;
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Solution</strong></summary>
+
 ```python
 def myAtoi(s):
     s = s.strip()
@@ -588,6 +701,8 @@ def myAtoi(s):
     return sign * result
 ```
 
+</details>
+
 **Time**: O(n) | **Space**: O(1)
 
 **Related**: [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
@@ -599,6 +714,54 @@ def myAtoi(s):
 **Problem**: Find longest common prefix among array of strings.
 
 **Solution**:
+
+<details open>
+<summary><strong>📋 C++ Solution</strong></summary>
+
+```cpp
+string longestCommonPrefix(vector<string>& strs) {
+    if (strs.empty()) {
+        return "";
+    }
+    
+    string prefix = strs[0];
+    
+    for (int i = 1; i < strs.size(); i++) {
+        while (strs[i].find(prefix) != 0) {
+            prefix = prefix.substr(0, prefix.length() - 1);
+            if (prefix.empty()) {
+                return "";
+            }
+        }
+    }
+    
+    return prefix;
+}
+
+// Alternative: Character-by-character comparison
+string longestCommonPrefix(vector<string>& strs) {
+    if (strs.empty()) {
+        return "";
+    }
+    
+    for (int i = 0; i < strs[0].length(); i++) {
+        char c = strs[0][i];
+        for (int j = 1; j < strs.size(); j++) {
+            if (i == strs[j].length() || strs[j][i] != c) {
+                return strs[0].substr(0, i);
+            }
+        }
+    }
+    
+    return strs[0];
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Solution</strong></summary>
+
 ```python
 def longestCommonPrefix(strs):
     if not strs:
@@ -614,6 +777,8 @@ def longestCommonPrefix(strs):
     return prefix
 ```
 
+</details>
+
 **Time**: O(S) where S is sum of all characters | **Space**: O(1)
 
 **Related**: [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
@@ -625,6 +790,69 @@ def longestCommonPrefix(strs):
 ### 1. Rabin-Karp Algorithm
 
 **Pattern**: Rolling hash for substring search.
+
+<details open>
+<summary><strong>📋 C++ Template</strong></summary>
+
+```cpp
+int rabinKarp(string text, string pattern) {
+    int n = text.length();
+    int m = pattern.length();
+    
+    if (m > n) {
+        return -1;
+    }
+    
+    const int base = 256;
+    const int mod = 1e9 + 7;
+    
+    // Calculate hash of pattern and first window
+    long long patternHash = 0;
+    long long windowHash = 0;
+    long long h = 1;
+    
+    // Calculate h = base^(m-1) % mod
+    for (int i = 0; i < m - 1; i++) {
+        h = (h * base) % mod;
+    }
+    
+    for (int i = 0; i < m; i++) {
+        patternHash = (patternHash * base + pattern[i]) % mod;
+        windowHash = (windowHash * base + text[i]) % mod;
+    }
+    
+    for (int i = 0; i <= n - m; i++) {
+        if (patternHash == windowHash) {
+            // Verify actual match (handle hash collision)
+            bool match = true;
+            for (int j = 0; j < m; j++) {
+                if (text[i + j] != pattern[j]) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) {
+                return i;
+            }
+        }
+        
+        // Calculate hash for next window
+        if (i < n - m) {
+            windowHash = (base * (windowHash - text[i] * h) + text[i + m]) % mod;
+            if (windowHash < 0) {
+                windowHash += mod;
+            }
+        }
+    }
+    
+    return -1;
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Template</strong></summary>
 
 ```python
 def rabin_karp(text, pattern):
@@ -656,11 +884,62 @@ def rabin_karp(text, pattern):
     return -1
 ```
 
+</details>
+
 ---
 
 ### 2. Z-Algorithm
 
 **Pattern**: Find all occurrences of pattern in text.
+
+<details open>
+<summary><strong>📋 C++ Template</strong></summary>
+
+```cpp
+vector<int> zAlgorithm(string s) {
+    int n = s.length();
+    vector<int> z(n, 0);
+    int left = 0, right = 0;
+    
+    for (int i = 1; i < n; i++) {
+        if (i <= right) {
+            z[i] = min(right - i + 1, z[i - left]);
+        }
+        
+        while (i + z[i] < n && s[z[i]] == s[i + z[i]]) {
+            z[i]++;
+        }
+        
+        if (i + z[i] - 1 > right) {
+            left = i;
+            right = i + z[i] - 1;
+        }
+    }
+    
+    return z;
+}
+
+// Find all occurrences of pattern in text
+vector<int> findPattern(string text, string pattern) {
+    string combined = pattern + "$" + text;
+    vector<int> z = zAlgorithm(combined);
+    vector<int> result;
+    
+    int m = pattern.length();
+    for (int i = m + 1; i < combined.length(); i++) {
+        if (z[i] == m) {
+            result.push_back(i - m - 1);
+        }
+    }
+    
+    return result;
+}
+```
+
+</details>
+
+<details>
+<summary><strong>🐍 Python Template</strong></summary>
 
 ```python
 def z_algorithm(s):
@@ -681,6 +960,8 @@ def z_algorithm(s):
     
     return z
 ```
+
+</details>
 
 ---
 
