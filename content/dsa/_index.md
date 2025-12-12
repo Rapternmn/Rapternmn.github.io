@@ -7,7 +7,8 @@ This section covers essential coding patterns for Data Structures and Algorithms
 
 ---
 
-## 📖 Patterns
+## 📖 Sections
 
-Browse all patterns: [DSA Coding Patterns Overview]({{< ref "1-DSA_Coding_Patterns.md" >}})
+- **[Data Structures]({{< ref "data-structures/_index.md" >}})** - Arrays, Strings, Linked Lists, Stacks, Queues, Heaps, Trees, Graphs, Hash Tables, and Sets with problems and patterns
+- **[Coding Patterns]({{< ref "1-DSA_Coding_Patterns.md" >}})** - Two pointers, sliding window, binary search, dynamic programming, and more
 
