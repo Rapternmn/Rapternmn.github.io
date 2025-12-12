@@ -466,6 +466,8 @@ def longestConsecutive(nums):
 
 **Pattern**: Use prefix sum with hash map.
 
+**Related Pattern**: See [Prefix Sum Pattern]({{< ref "../22-Prefix_Sum.md" >}})
+
 ```python
 def subarraySum(nums, k):
     count = 0

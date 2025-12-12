@@ -244,6 +244,8 @@ def binary_search(arr, target):
 - Subarray sum problems
 - Multiple queries on same array
 
+**Related Pattern**: See [Prefix Sum Pattern]({{< ref "../22-Prefix_Sum.md" >}})
+
 **Template**:
 
 <details open>

@@ -482,6 +482,29 @@ Each pattern includes:
 
 ---
 
+### 21. Prefix Sum
+
+**Concept**: Precompute cumulative sums to answer range sum queries in O(1) time.
+
+**When to Use**:
+- Multiple range sum queries
+- Subarray sum problems
+- 2D matrix range queries
+- Optimizing O(n) queries to O(1)
+
+**Classic Problems**:
+- [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)
+- [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
+- [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)
+- [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
+- [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/)
+
+**Time Complexity**: O(n) preprocessing, O(1) per query  
+**Space Complexity**: O(n)
+
+---
+
 ## Pattern Selection Guide
 
 ### How to Identify Which Pattern to Use
