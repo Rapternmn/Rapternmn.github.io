@@ -93,7 +93,7 @@ def fast_slow_pointers(head):
     return slow  # slow is at middle
 ```
 
-**Related Pattern**: See [Fast & Slow Pointers Pattern]({{< ref "../5-Fast_Slow_Pointers.md" >}})
+**Related Pattern**: See [Fast & Slow Pointers Pattern]({{< ref "../coding-patterns/5-Fast_Slow_Pointers.md" >}})
 
 ---
 
@@ -129,7 +129,7 @@ def reverse_list_recursive(head):
     return new_head
 ```
 
-**Related Pattern**: See [In-Place Reversal Pattern]({{< ref "../11-In_Place_Reversal_Linked_List.md" >}})
+**Related Pattern**: See [In-Place Reversal Pattern]({{< ref "../coding-patterns/11-In_Place_Reversal_Linked_List.md" >}})
 
 ---
 

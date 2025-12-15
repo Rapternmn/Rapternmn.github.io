@@ -415,7 +415,7 @@ def bfs(root):
     return result
 ```
 
-**Related Pattern**: See [Tree BFS/DFS]({{< ref "../6-Tree_BFS_DFS.md" >}}) and [Graph BFS/DFS]({{< ref "../14-Graph_BFS_DFS.md" >}})
+**Related Pattern**: See [Tree BFS/DFS]({{< ref "../coding-patterns/6-Tree_BFS_DFS.md" >}}) and [Graph BFS/DFS]({{< ref "../coding-patterns/14-Graph_BFS_DFS.md" >}})
 
 ---
 

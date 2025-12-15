@@ -187,7 +187,7 @@ def bfs(graph, start):
 
 </details>
 
-**Related Pattern**: See [Graph BFS/DFS Pattern]({{< ref "../14-Graph_BFS_DFS.md" >}})
+**Related Pattern**: See [Graph BFS/DFS Pattern]({{< ref "../coding-patterns/14-Graph_BFS_DFS.md" >}})
 
 ---
 
@@ -317,7 +317,7 @@ def topological_sort(graph):
 
 </details>
 
-**Related Pattern**: See [Topological Sort Pattern]({{< ref "../17-Topological_Sort.md" >}})
+**Related Pattern**: See [Topological Sort Pattern]({{< ref "../coding-patterns/17-Topological_Sort.md" >}})
 
 ---
 

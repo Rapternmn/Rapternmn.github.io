@@ -155,7 +155,7 @@ def top_k_elements(arr, k):
 top_k = heapq.nlargest(k, arr)
 ```
 
-**Related Pattern**: See [Top K Elements Pattern]({{< ref "../10-Top_K_Elements.md" >}})
+**Related Pattern**: See [Top K Elements Pattern]({{< ref "../coding-patterns/10-Top_K_Elements.md" >}})
 
 ---
 
@@ -190,7 +190,7 @@ class MedianFinder:
         return (-self.small[0] + self.large[0]) / 2
 ```
 
-**Related Pattern**: See [Two Heaps Pattern]({{< ref "../15-Two_Heaps.md" >}})
+**Related Pattern**: See [Two Heaps Pattern]({{< ref "../coding-patterns/15-Two_Heaps.md" >}})
 
 ---
 
@@ -224,7 +224,7 @@ def merge_k_lists(lists):
     return result
 ```
 
-**Related Pattern**: See [K-way Merge Pattern]({{< ref "../16-K_way_Merge.md" >}})
+**Related Pattern**: See [K-way Merge Pattern]({{< ref "../coding-patterns/16-K_way_Merge.md" >}})
 
 ---
 

@@ -97,7 +97,7 @@ def two_pointers(arr):
 
 </details>
 
-**Related Pattern**: See [Two Pointers Pattern]({{< ref "../2-Two_Pointers.md" >}})
+**Related Pattern**: See [Two Pointers Pattern]({{< ref "../coding-patterns/2-Two_Pointers.md" >}})
 
 ---
 
@@ -167,7 +167,7 @@ def sliding_window(arr, k):
 
 </details>
 
-**Related Pattern**: See [Sliding Window Pattern]({{< ref "../3-Sliding_Window.md" >}})
+**Related Pattern**: See [Sliding Window Pattern]({{< ref "../coding-patterns/3-Sliding_Window.md" >}})
 
 ---
 
@@ -231,7 +231,7 @@ def binary_search(arr, target):
 
 </details>
 
-**Related Pattern**: See [Binary Search Pattern]({{< ref "../4-Binary_Search.md" >}})
+**Related Pattern**: See [Binary Search Pattern]({{< ref "../coding-patterns/4-Binary_Search.md" >}})
 
 ---
 
@@ -244,7 +244,7 @@ def binary_search(arr, target):
 - Subarray sum problems
 - Multiple queries on same array
 
-**Related Pattern**: See [Prefix Sum Pattern]({{< ref "../22-Prefix_Sum.md" >}})
+**Related Pattern**: See [Prefix Sum Pattern]({{< ref "../coding-patterns/22-Prefix_Sum.md" >}})
 
 **Template**:
 
@@ -341,7 +341,7 @@ def monotonic_stack(arr):
 
 </details>
 
-**Related Pattern**: See [Monotonic Stack Pattern]({{< ref "../20-Monotonic_Stack.md" >}})
+**Related Pattern**: See [Monotonic Stack Pattern]({{< ref "../coding-patterns/20-Monotonic_Stack.md" >}})
 
 ---
 
@@ -749,7 +749,7 @@ def merge(intervals):
 
 **Related**: [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
-**Pattern**: See [Merge Intervals Pattern]({{< ref "../9-Merge_Intervals.md" >}})
+**Pattern**: See [Merge Intervals Pattern]({{< ref "../coding-patterns/9-Merge_Intervals.md" >}})
 
 ---
 

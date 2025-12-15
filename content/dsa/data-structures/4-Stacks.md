@@ -133,7 +133,7 @@ def monotonic_stack(arr):
     return result
 ```
 
-**Related Pattern**: See [Monotonic Stack Pattern]({{< ref "../20-Monotonic_Stack.md" >}})
+**Related Pattern**: See [Monotonic Stack Pattern]({{< ref "../coding-patterns/20-Monotonic_Stack.md" >}})
 
 ---
 

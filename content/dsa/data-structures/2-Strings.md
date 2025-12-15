@@ -67,7 +67,7 @@ def two_pointers_string(s):
     return True
 ```
 
-**Related Pattern**: See [Two Pointers Pattern]({{< ref "../2-Two_Pointers.md" >}})
+**Related Pattern**: See [Two Pointers Pattern]({{< ref "../coding-patterns/2-Two_Pointers.md" >}})
 
 ---
 
@@ -102,7 +102,7 @@ def sliding_window_string(s):
     return max_len
 ```
 
-**Related Pattern**: See [Sliding Window Pattern]({{< ref "../3-Sliding_Window.md" >}})
+**Related Pattern**: See [Sliding Window Pattern]({{< ref "../coding-patterns/3-Sliding_Window.md" >}})
 
 ---
 

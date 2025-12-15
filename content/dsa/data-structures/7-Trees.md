@@ -59,7 +59,7 @@ class TreeNode:
 - **Postorder**: Left → Right → Root
 - **Level-order**: Level by level (BFS)
 
-**Related Pattern**: See [Tree BFS/DFS Pattern]({{< ref "../6-Tree_BFS_DFS.md" >}})
+**Related Pattern**: See [Tree BFS/DFS Pattern]({{< ref "../coding-patterns/6-Tree_BFS_DFS.md" >}})
 
 ---
 

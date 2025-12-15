@@ -2,7 +2,7 @@
 title = "Data Structures"
 date = 2025-12-06T10:00:00+05:30
 draft = false
-weight = 0
+weight = 1
 description = "Comprehensive guide to fundamental data structures: Arrays, Strings, Linked Lists, Stacks, Queues, Heaps, Trees, Graphs, Hash Tables, and Sets with problems and patterns."
 +++
 
@@ -33,12 +33,12 @@ This section covers fundamental data structures with their operations, common pa
 
 Many problems use similar patterns across different data structures:
 
-- **Two Pointers**: Arrays, Strings, Linked Lists - See [Two Pointers Pattern]({{< ref "../2-Two_Pointers.md" >}})
-- **Sliding Window**: Arrays, Strings - See [Sliding Window Pattern]({{< ref "../3-Sliding_Window.md" >}})
-- **Fast & Slow Pointers**: Linked Lists - See [Fast & Slow Pointers Pattern]({{< ref "../5-Fast_Slow_Pointers.md" >}})
-- **BFS/DFS**: Trees, Graphs - See [Tree BFS/DFS]({{< ref "../6-Tree_BFS_DFS.md" >}}) and [Graph BFS/DFS]({{< ref "../14-Graph_BFS_DFS.md" >}})
-- **Binary Search**: Arrays, Strings - See [Binary Search Pattern]({{< ref "../4-Binary_Search.md" >}})
-- **Monotonic Stack**: Arrays - See [Monotonic Stack Pattern]({{< ref "../20-Monotonic_Stack.md" >}})
+- **Two Pointers**: Arrays, Strings, Linked Lists - See [Two Pointers Pattern]({{< ref "../coding-patterns/2-Two_Pointers.md" >}})
+- **Sliding Window**: Arrays, Strings - See [Sliding Window Pattern]({{< ref "../coding-patterns/3-Sliding_Window.md" >}})
+- **Fast & Slow Pointers**: Linked Lists - See [Fast & Slow Pointers Pattern]({{< ref "../coding-patterns/5-Fast_Slow_Pointers.md" >}})
+- **BFS/DFS**: Trees, Graphs - See [Tree BFS/DFS]({{< ref "../coding-patterns/6-Tree_BFS_DFS.md" >}}) and [Graph BFS/DFS]({{< ref "../coding-patterns/14-Graph_BFS_DFS.md" >}})
+- **Binary Search**: Arrays, Strings - See [Binary Search Pattern]({{< ref "../coding-patterns/4-Binary_Search.md" >}})
+- **Monotonic Stack**: Arrays - See [Monotonic Stack Pattern]({{< ref "../coding-patterns/20-Monotonic_Stack.md" >}})
 
 ---
 
