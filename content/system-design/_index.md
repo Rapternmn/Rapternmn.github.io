@@ -14,4 +14,5 @@ This section covers System Design including Low Level Design (LLD), High Level D
 - **[Concurrency]({{< ref "concurrency/_index.md" >}})** - Threading, synchronization, rate limiter, thread pool
 - **[Data Engineering]({{< ref "data-engineering/_index.md" >}})** - Data pipelines, ETL/ELT, data warehousing, streaming systems
 - **[Databases]({{< ref "databases/_index.md" >}})** - Database design, SQL/NoSQL, indexing, query optimization, transactions
+- **[System Components]({{< ref "system-components/_index.md" >}})** - Load balancing, caching, API Gateway, message queues, service discovery, CDN, distributed systems, scalability, availability, monitoring, security
 
