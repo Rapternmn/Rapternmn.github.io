@@ -1,7 +1,7 @@
 +++
 title = "Databases"
 description = "Databases: Database design, SQL and NoSQL databases, indexing strategies, query optimization, transactions, ACID properties, and database system design for scalable applications."
-weight = 5
+weight = 3
 +++
 
 This section covers database concepts essential for system design. Topics include database types (SQL and NoSQL), database design principles, indexing strategies, query optimization, transactions, ACID properties, replication, sharding, and designing scalable database systems.

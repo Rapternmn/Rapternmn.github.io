@@ -2,7 +2,7 @@
 title = "System Design Components"
 date = 2025-12-15T10:00:00+05:30
 draft = false
-weight = 2
+weight = 1
 description = "System Design Components: Load balancing, caching, API Gateway, message queues, service discovery, CDN, distributed systems fundamentals, scalability patterns, availability, monitoring, and security. Essential infrastructure components for building scalable systems."
 +++
 

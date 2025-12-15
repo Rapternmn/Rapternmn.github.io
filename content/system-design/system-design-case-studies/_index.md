@@ -2,7 +2,7 @@
 title = "System Design Case Studies"
 date = 2025-12-15T10:00:00+05:30
 draft = false
-weight = 1
+weight = 2
 description = "High-Level System Design case studies: Design scalable distributed systems like URL Shortener, Chat System, Video Streaming, Social Media Feed, E-commerce Platform, and more."
 +++
 
