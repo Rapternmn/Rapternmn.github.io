@@ -11,6 +11,7 @@ This section covers High Level System Design (HLD) including Data Engineering, D
 
 - **[System Design Case Studies]({{< ref "system-design-case-studies/_index.md" >}})** - High-Level System Design case studies: URL Shortener, Chat System, Video Streaming, Social Media Feed, E-commerce Platform
 - **[System Components]({{< ref "system-components/_index.md" >}})** - Load balancing, caching, API Gateway, message queues, service discovery, CDN, distributed systems, scalability, availability, monitoring, security
+- **[API Design]({{< ref "api-design/_index.md" >}})** - API design guidelines, REST principles, HTTP methods, versioning, documentation, and best practices
 - **[Data Engineering]({{< ref "data-engineering/_index.md" >}})** - Data pipelines, ETL/ELT, data warehousing, streaming systems
 - **[Databases]({{< ref "databases/_index.md" >}})** - Database design, SQL/NoSQL, indexing, query optimization, transactions
 
