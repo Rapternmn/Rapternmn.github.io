@@ -90,9 +90,9 @@ canonifyURLs = true
     url = "/genai/"
     weight = 3
   [[menu.main]]
-    identifier = "dsa"
-    name = "DSA"
-    url = "/dsa/"
+    identifier = "coding"
+    name = "Coding"
+    url = "/coding/"
     weight = 6
   [[menu.main]]
     identifier = "system-design"

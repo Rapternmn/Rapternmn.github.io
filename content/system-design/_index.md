@@ -1,17 +1,14 @@
 +++
 title = "System Design"
-description = "System Design: Low Level Design (LLD), High Level Design (HLD), ML System Design, Data Engineering, OOPs principles, Design Patterns, and practical case studies. Learn to design scalable, maintainable systems."
+description = "System Design: High Level Design (HLD), ML System Design, Data Engineering, Databases, and System Components. Learn to design scalable, distributed systems with proper infrastructure and architecture."
 +++
 
-This section covers System Design including Low Level Design (LLD), High Level Design (HLD), ML System Design, Data Engineering, and Databases. Topics include OOPs fundamentals, UML diagrams, SOLID principles, design patterns (creational, structural, behavioral), concurrency and thread safety, data pipelines, database design, and practical case studies like Parking Lot, ATM, Elevator, Chess, and more.
+This section covers High Level System Design (HLD) including Data Engineering, Databases, and System Components. Topics include data pipelines, ETL/ELT processes, data warehousing, database design, SQL/NoSQL databases, load balancing, caching, API Gateway, message queues, service discovery, CDN, distributed systems, scalability, availability, monitoring, and security.
 
 ---
 
 ## 📖 Topics
 
-- **[LLD Case Studies]({{< ref "lld-case-studies/_index.md" >}})** - LLD fundamentals, OOPs, UML, and practical case studies
-- **[Design Patterns]({{< ref "design-patterns/_index.md" >}})** - All design patterns
-- **[Concurrency]({{< ref "concurrency/_index.md" >}})** - Threading, synchronization, rate limiter, thread pool
 - **[Data Engineering]({{< ref "data-engineering/_index.md" >}})** - Data pipelines, ETL/ELT, data warehousing, streaming systems
 - **[Databases]({{< ref "databases/_index.md" >}})** - Database design, SQL/NoSQL, indexing, query optimization, transactions
 - **[System Components]({{< ref "system-components/_index.md" >}})** - Load balancing, caching, API Gateway, message queues, service discovery, CDN, distributed systems, scalability, availability, monitoring, security

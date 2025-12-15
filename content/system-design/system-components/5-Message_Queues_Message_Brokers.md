@@ -478,5 +478,5 @@ Collect logs from multiple services.
 
 - **[Service Discovery & Service Mesh]({{< ref "6-Service_Discovery_Service_Mesh.md" >}})** - Service communication patterns
 - **[Distributed Systems Fundamentals]({{< ref "8-Distributed_Systems_Fundamentals.md" >}})** - Eventual consistency, distributed transactions
-- **[Concurrency - Message Broker Design]({{< ref "../concurrency/12-Message_Broker_Design.md" >}})** - Implementation details
+- **[Concurrency - Message Broker Design]({{< ref "../../coding/concurrency/12-Message_Broker_Design.md" >}})** - Implementation details
 

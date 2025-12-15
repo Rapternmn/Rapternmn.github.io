@@ -1,7 +1,7 @@
 +++
 title = "LLD Case Studies"
 description = "Low Level Design Case Studies: Practical implementations of real-world systems including Parking Lot, Elevator, ATM, Library Management, and more. Learn to design scalable systems using Python."
-weight = 2
+weight = 3
 +++
 
 This section covers practical Low Level Design (LLD) case studies commonly asked in technical interviews. Each case study includes problem analysis, requirements gathering, class design, and complete Python implementations of real-world systems.

@@ -1,7 +1,7 @@
 +++
 title = "Design Patterns"
 description = "Design Patterns: SOLID Principles, Creational Patterns (Singleton, Factory, Builder, Prototype), Structural Patterns, and Behavioral Patterns. Learn proven solutions to common design problems."
-weight = 1
+weight = 4
 +++
 
 This section covers design patterns and SOLID principles essential for writing maintainable, scalable code. Topics include creational patterns (Singleton, Factory, Builder, Prototype), structural patterns (Adapter, Decorator, Facade, Proxy), and behavioral patterns (Observer, Strategy, Command, State, Template Method).

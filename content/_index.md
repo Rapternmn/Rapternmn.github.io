@@ -11,8 +11,8 @@ Here you'll find articles covering:
 - 🤖 **Deep Learning** - Deep learning fundamentals, computer vision (CNNs), and natural language processing
 - 🎯 **Machine Learning** - ML fundamentals, data science, statistics, and hands-on ML coding implementations
 - ✨ **GenAI** - Generative AI, LLMs, and AI-powered content creation
-- 🧩 **DSA** - Data Structures and Algorithms coding patterns, problem-solving techniques, and interview preparation
-- 🏗️ **System Design** - Low Level Design (LLD), High Level Design (HLD), ML System Design, OOPs principles, Design Patterns, and practical case studies
+- 🧩 **Coding** - Data Structures, Algorithms, Coding Patterns, Low Level Design (LLD), Design Patterns, and Concurrency
+- 🏗️ **System Design** - High Level Design (HLD), Data Engineering, Databases, and System Components
 
 Feel free to explore, learn, and engage with the content!
 

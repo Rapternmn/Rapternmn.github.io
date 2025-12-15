@@ -1,7 +1,7 @@
 +++
 title = "Concurrency"
 description = "Concurrency in System Design: Threading, synchronization, thread safety, concurrency patterns, and practical implementations like Rate Limiter, Thread Pool, Producer-Consumer, and Concurrent Cache."
-weight = 3
+weight = 5
 +++
 
 This section covers concurrency concepts essential for building scalable, thread-safe systems. Topics include threading fundamentals, synchronization primitives, common concurrency problems, patterns, and practical implementations of real-world systems.
