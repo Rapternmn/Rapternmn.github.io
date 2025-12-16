@@ -130,8 +130,8 @@ game.board.display()
 
 ## Design Patterns Used
 
-1. **[Strategy Pattern]({{< ref "../../design-patterns/12-Strategy_Pattern.md" >}})**: Different player strategies (human, AI with minimax) can be implemented as interchangeable strategies
-2. **[State Pattern]({{< ref "../../design-patterns/14-State_Pattern.md" >}})**: `GameStatus` enum manages game state transitions (IN_PROGRESS → X_WON/O_WON/DRAW)
+1. **[Strategy Pattern]({{< ref "../design-patterns/12-Strategy_Pattern.md" >}})**: Different player strategies (human, AI with minimax) can be implemented as interchangeable strategies
+2. **[State Pattern]({{< ref "../design-patterns/14-State_Pattern.md" >}})**: `GameStatus` enum manages game state transitions (IN_PROGRESS → X_WON/O_WON/DRAW)
 
 ---
 

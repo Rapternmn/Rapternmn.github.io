@@ -169,7 +169,7 @@ machine.dispense()
 
 ## Design Patterns Used
 
-1. **[State Pattern]({{< ref "../../design-patterns/14-State_Pattern.md" >}})**: `VendingMachineState` interface with concrete states (`IdleState`, `HasMoneyState`, `DispensingState`) manages vending machine behavior and state transitions
+1. **[State Pattern]({{< ref "../design-patterns/14-State_Pattern.md" >}})**: `VendingMachineState` interface with concrete states (`IdleState`, `HasMoneyState`, `DispensingState`) manages vending machine behavior and state transitions
 
 ---
 

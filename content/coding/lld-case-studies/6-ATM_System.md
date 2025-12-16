@@ -289,9 +289,9 @@ atm.eject_card()
 
 ## Design Patterns Used
 
-1. **[State Pattern]({{< ref "../../design-patterns/14-State_Pattern.md" >}})**: `ATMState` interface with concrete states (`IdleState`, `HasCardState`, `HasPinState`, `WithdrawState`, `DepositState`, `TransferState`) manages ATM behavior and transitions
-2. **[Strategy Pattern]({{< ref "../../design-patterns/12-Strategy_Pattern.md" >}})**: Different transaction types (withdraw, deposit, transfer) can be implemented as interchangeable strategies
-3. **[Factory Pattern]({{< ref "../../design-patterns/4-Factory_Pattern.md" >}})**: `Transaction` objects can be created using Factory pattern based on transaction type
+1. **[State Pattern]({{< ref "../design-patterns/14-State_Pattern.md" >}})**: `ATMState` interface with concrete states (`IdleState`, `HasCardState`, `HasPinState`, `WithdrawState`, `DepositState`, `TransferState`) manages ATM behavior and transitions
+2. **[Strategy Pattern]({{< ref "../design-patterns/12-Strategy_Pattern.md" >}})**: Different transaction types (withdraw, deposit, transfer) can be implemented as interchangeable strategies
+3. **[Factory Pattern]({{< ref "../design-patterns/4-Factory_Pattern.md" >}})**: `Transaction` objects can be created using Factory pattern based on transaction type
 
 ---
 

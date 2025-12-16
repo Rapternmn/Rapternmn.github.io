@@ -299,9 +299,9 @@ for _ in range(10):
 
 ## Design Patterns Used
 
-1. **[State Pattern]({{< ref "../../design-patterns/14-State_Pattern.md" >}})**: `ElevatorState` interface with concrete states (`IdleState`, `MovingState`, `StoppedState`) manages elevator behavior based on current state
-2. **[Strategy Pattern]({{< ref "../../design-patterns/12-Strategy_Pattern.md" >}})**: Different scheduling algorithms (nearest elevator, SCAN, LOOK) can be implemented as interchangeable strategies
-3. **[Singleton Pattern]({{< ref "../../design-patterns/3-Singleton_Pattern.md" >}})**: `ElevatorController` can be implemented as Singleton to ensure single point of control for elevator management
+1. **[State Pattern]({{< ref "../design-patterns/14-State_Pattern.md" >}})**: `ElevatorState` interface with concrete states (`IdleState`, `MovingState`, `StoppedState`) manages elevator behavior based on current state
+2. **[Strategy Pattern]({{< ref "../design-patterns/12-Strategy_Pattern.md" >}})**: Different scheduling algorithms (nearest elevator, SCAN, LOOK) can be implemented as interchangeable strategies
+3. **[Singleton Pattern]({{< ref "../design-patterns/3-Singleton_Pattern.md" >}})**: `ElevatorController` can be implemented as Singleton to ensure single point of control for elevator management
 
 ---
 
