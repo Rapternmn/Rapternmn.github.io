@@ -139,26 +139,20 @@ clickCount: BIGINT
 
 ### Architecture
 
-```
-Client → CDN → Load Balancer → API Gateway
-                              ↓
-                    [URL Service] (Stateless)
-                    ↓           ↓
-            [Redis Cache]  [Database]
-                    ↓
-            [Analytics Service] → Message Queue
-```
+![URL Shortener Architecture](/images/system-design/url-shortener-architecture.png)
 
 ### Components
 
-1. **CDN**: Serve static assets, cache redirects
+1. **CDN**: Serve static assets, cache redirects (Edge locations)
 2. **Load Balancer**: Distribute traffic
-3. **API Gateway**: Authentication, rate limiting
+3. **API Gateway**: Authentication, rate limiting, request routing
 4. **URL Service**: Core shortening and redirection logic
-5. **Cache (Redis)**: Cache hot URL mappings
-6. **Database**: Store URL mappings
-7. **Analytics Service**: Process click events asynchronously
-8. **Message Queue**: Async analytics processing
+5. **Key Generation Service (KGS)**: Pre-generates unique keys and serves them to URL Service
+6. **Cache (Redis)**: Cache hot URL mappings
+7. **Database**: Store URL mappings (Cassandra/DynamoDB) and Metadata
+8. **Message Queue**: Decouples redirection from analytics processing (Kafka/RabbitMQ)
+9. **Analytics Service**: Consumes events and aggregates data
+10. **Data Warehouse**: Stores historical analytics data (ClickHouse/Redshift)
 
 ---
 
@@ -172,44 +166,41 @@ Client → CDN → Load Balancer → API Gateway
 1. Hash long URL (MD5/SHA256)
 2. Take first 7 characters
 3. Check for collisions
-4. If collision, append counter
+4. If collision, append counter and re-hash
 
-**Pros**: Deterministic, same URL = same code
-**Cons**: Collision handling needed
+**Pros**: Deterministic
+**Cons**: Collision checks are expensive; longer content to hash
 
-#### Option 2: Base62 Encoding
-
-**Approach**:
-1. Generate unique ID (auto-increment or UUID)
-2. Encode to base62 (0-9, a-z, A-Z)
-3. Use first 7 characters
-
-**Pros**: Shorter codes, no collisions
-**Cons**: Predictable sequence
-
-#### Option 3: Random Generation
+#### Option 2: Key Generation Service (KGS) [Recommended]
 
 **Approach**:
-1. Generate random 7-character string
-2. Check if exists
-3. If exists, regenerate
+1. **Pre-generation**: A dedicated service generates random 7-character strings (base62) offline.
+2. **Uniqueness**: Ensures keys are unique and stores them in a "Ready" table/database.
+3. **Distribution**: Loads a batch of keys (e.g., 1000) into memory of each URL Service instance.
+4. **Assignment**: When a request comes, URL Service picks the next available key from memory.
 
-**Pros**: Unpredictable, secure
-**Cons**: Collision checks needed
+**Pros**:
+- **O(1) Write Latency**: No collision checks or database reads during request.
+- **Concurrency**: Simple to scale; each server has its own distinct batch of keys.
 
-**Recommendation**: **Base62 encoding** of unique ID (simplest, no collisions)
+**Cons**:
+- Management of KGS infrastructure.
+- Potential for lost keys if a server crashes (acceptable loss).
+
+**Recommendation**: **Key Generation Service (KGS)**. This is the industry standard for high-throughput scaling.
 
 ---
 
 ### URL Redirection Flow
 
 1. **Client requests**: `GET /abc123`
-2. **Check CDN cache**: If cached, return redirect
-3. **Check Redis cache**: If cached, return redirect, update cache TTL
+2. **Check CDN cache**: If cached, return redirect (301/302)
+3. **Check Redis cache**: If cached, return redirect
 4. **Query database**: Lookup shortCode
-5. **Cache result**: Store in Redis and CDN
-6. **Return 302 redirect**: To longUrl
-7. **Async analytics**: Publish click event to queue
+5. **Cache result**: Update Redis and CDN
+6. **Publish Event**: Send `{shortCode, timestamp, userAgent}` to Message Queue (Kafka)
+7. **Return 302 redirect**: To `longUrl`
+8. **Async Analytics**: Analytics Service consumes event from Queue and updates DB
 
 ---
 
