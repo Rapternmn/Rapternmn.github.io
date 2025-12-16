@@ -148,18 +148,7 @@ timestamp: TIMESTAMP
 
 ### Architecture
 
-```
-Client → Load Balancer → Feed Service
-                            ↓
-                    [Cache (Redis)]
-                            ↓
-        ┌──────────────────┼──────────────────┐
-        ↓                   ↓                   ↓
-    [Fan-out]         [Feed Gen]          [Ranking]
-    Service           Service             Service
-        ↓                   ↓                   ↓
-    [Database]        [Database]          [ML Service]
-```
+![Social Media Feed Architecture](/images/system-design/social-media-feed-architecture.png)
 
 ### Components
 

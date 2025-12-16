@@ -157,19 +157,7 @@ completed: BOOLEAN
 
 ### Architecture
 
-```
-Upload: Client → API Gateway → Upload Service → Object Storage
-                                              ↓
-                                    [Transcoding Queue]
-                                              ↓
-                                    [Transcoding Service]
-                                              ↓
-                                    [Object Storage (CDN)]
-
-Streaming: Client → CDN → Video Files
-                ↓
-        [Metadata Service] → Database
-```
+![Video Streaming Architecture](/images/system-design/video-streaming-architecture.png)
 
 ### Components
 

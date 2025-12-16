@@ -223,13 +223,7 @@ Request: {
 
 ### Architecture
 
-```
-Client → API Gateway → Rate Limiter → Backend Service
-                ↓
-        [Redis/Database]
-                ↓
-        [Configuration Service]
-```
+![Rate Limiter Architecture](/images/system-design/rate-limiter-architecture.png)
 
 ### Components
 

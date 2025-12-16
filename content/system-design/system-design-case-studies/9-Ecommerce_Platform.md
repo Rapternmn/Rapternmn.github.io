@@ -189,19 +189,7 @@ available: INT (computed: quantity - reserved)
 
 ### Architecture
 
-```
-Client → CDN → Load Balancer → API Gateway
-                              ↓
-        ┌─────────────────────┼─────────────────────┐
-        ↓                     ↓                     ↓
-    [Product]          [Cart]              [Order]
-    Service            Service             Service
-        ↓                     ↓                     ↓
-    [Database]         [Redis]            [Database]
-        ↓                     ↓                     ↓
-    [Search]          [Payment]          [Inventory]
-    Service           Gateway            Service
-```
+![Ecommerce Architecture](/images/system-design/ecommerce-architecture.png)
 
 ### Components
 

@@ -165,17 +165,7 @@ lastSeen: TIMESTAMP
 
 ### Architecture
 
-```
-Client → Load Balancer → WebSocket Server
-                            ↓
-                    [Message Service]
-                    ↓           ↓
-            [Message Queue]  [Database]
-                    ↓
-            [Presence Service] → Redis
-                    ↓
-            [Notification Service] → Push Notifications
-```
+![Chat System Architecture](/images/system-design/chat-system-architecture.png)
 
 ### Components
 

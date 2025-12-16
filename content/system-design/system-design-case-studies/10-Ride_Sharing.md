@@ -174,19 +174,7 @@ completedAt: TIMESTAMP
 
 ### Architecture
 
-```
-Client → Load Balancer → API Gateway
-                        ↓
-        ┌───────────────┼───────────────┐
-        ↓               ↓               ↓
-    [Ride]        [Matching]      [Location]
-    Service       Service         Service
-        ↓               ↓               ↓
-    [Database]    [Geospatial]    [Time-Series DB]
-        ↓               ↓               ↓
-    [Payment]     [Pricing]       [Redis Cache]
-    Service       Service
-```
+![Ride Sharing Architecture](/images/system-design/ride-sharing-architecture.png)
 
 ### Components
 

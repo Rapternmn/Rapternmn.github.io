@@ -143,18 +143,7 @@ variables: JSON
 
 ### Architecture
 
-```
-Client → API Gateway → Notification Service
-                            ↓
-                    [Message Queue (Kafka)]
-                    ↓
-        ┌───────────┼───────────┐
-        ↓           ↓           ↓
-    [Push]      [Email]      [SMS]
-    Service     Service      Service
-        ↓           ↓           ↓
-    [FCM/APNS]  [SMTP]      [SMS Gateway]
-```
+![Notification System Architecture](/images/system-design/notification-system-architecture.png)
 
 ### Components
 

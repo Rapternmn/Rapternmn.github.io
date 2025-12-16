@@ -172,17 +172,7 @@ syncToken: VARCHAR
 
 ### Architecture
 
-```
-Client → API Gateway → File Service
-                        ↓
-                [Object Storage (S3)]
-                        ↓
-                [Metadata Database]
-                        ↓
-                [Sync Service] → Message Queue
-                        ↓
-                [Versioning Service]
-```
+![File Storage Architecture](/images/system-design/file-storage-architecture.png)
 
 ### Components
 
