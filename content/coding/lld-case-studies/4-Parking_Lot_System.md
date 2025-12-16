@@ -404,10 +404,10 @@ manager.unpark_vehicle(ticket1.ticket_id, payment)
 
 ## Design Patterns Used
 
-1. **Singleton**: ParkingLotManager ensures single instance
-2. **Factory**: VehicleFactory (can be added) for creating vehicles
-3. **Strategy**: PricingStrategy for different pricing models
-4. **Template Method**: Payment processing structure
+1. **[Singleton Pattern]({{< ref "../../design-patterns/3-Singleton_Pattern.md" >}})**: `ParkingLotManager` ensures single instance using thread-safe double-checked locking
+2. **[Factory Pattern]({{< ref "../../design-patterns/4-Factory_Pattern.md" >}})**: Vehicle creation can use Factory pattern (e.g., `VehicleFactory` for creating `Car`, `Motorcycle`, `Truck`)
+3. **[Strategy Pattern]({{< ref "../../design-patterns/12-Strategy_Pattern.md" >}})**: `PricingStrategy` interface with implementations (`HourlyPricing`, `FlatRatePricing`, `TieredPricing`) allows switching pricing models at runtime
+4. **[Template Method Pattern]({{< ref "../../design-patterns/15-Template_Method_Pattern.md" >}})**: `Payment` abstract class defines the structure for payment processing, with concrete implementations (`CashPayment`, `CardPayment`)
 
 ---
 

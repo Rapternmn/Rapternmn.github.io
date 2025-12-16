@@ -259,9 +259,9 @@ library.return_book("ISBN001", "M001")
 
 ## Design Patterns Used
 
-1. **Observer Pattern**: Notification service
-2. **Factory Pattern**: Book creation
-3. **Strategy Pattern**: Fine calculation strategies
+1. **[Observer Pattern]({{< ref "../../design-patterns/11-Observer_Pattern.md" >}})**: `NotificationService` interface with implementations (`EmailNotification`, `SMSNotification`) allows notifying members about book events (borrow, return, overdue)
+2. **[Factory Pattern]({{< ref "../../design-patterns/4-Factory_Pattern.md" >}})**: `Book` objects can be created using Factory pattern, especially useful when creating different book types
+3. **[Strategy Pattern]({{< ref "../../design-patterns/12-Strategy_Pattern.md" >}})**: Fine calculation can use Strategy pattern to support different fine calculation strategies (daily, flat, tiered)
 
 ---
 

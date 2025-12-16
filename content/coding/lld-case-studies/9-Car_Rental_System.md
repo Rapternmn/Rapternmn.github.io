@@ -183,6 +183,14 @@ if rental:
 
 ---
 
+## Design Patterns Used
+
+1. **[Factory Pattern]({{< ref "../../design-patterns/4-Factory_Pattern.md" >}})**: `Vehicle` objects can be created using Factory pattern based on vehicle type
+2. **[Strategy Pattern]({{< ref "../../design-patterns/12-Strategy_Pattern.md" >}})**: `Payment` interface with implementations (`CreditCardPayment`, `CashPayment`, etc.) allows different payment strategies
+3. **[Template Method Pattern]({{< ref "../../design-patterns/15-Template_Method_Pattern.md" >}})**: Rental processing follows a template structure with steps: create rental, calculate cost, process payment, return vehicle
+
+---
+
 ## Key Points
 
 - **Time Complexity**: O(V) for search, O(1) for rental operations

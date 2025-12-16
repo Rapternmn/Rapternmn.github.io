@@ -142,6 +142,13 @@ reader.add_bookmark("U001", 5, "Important concept")
 
 ---
 
+## Design Patterns Used
+
+1. **[Factory Pattern]({{< ref "../../design-patterns/4-Factory_Pattern.md" >}})**: `Book` and `User` objects can be created using Factory pattern
+2. **[Template Method Pattern]({{< ref "../../design-patterns/15-Template_Method_Pattern.md" >}})**: Reading session management follows a template structure for different book formats
+
+---
+
 ## Key Points
 
 - **Time Complexity**: O(1) for most operations

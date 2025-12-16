@@ -223,6 +223,14 @@ restaurant.serve_order(order.order_id, payment)
 
 ---
 
+## Design Patterns Used
+
+1. **[State Pattern]({{< ref "../../design-patterns/14-State_Pattern.md" >}})**: `OrderStatus` enum and state transitions manage order lifecycle (PENDING → CONFIRMED → PREPARING → READY → SERVED)
+2. **[Strategy Pattern]({{< ref "../../design-patterns/12-Strategy_Pattern.md" >}})**: `Payment` interface with implementations (`CashPayment`, `CardPayment`, etc.) allows different payment strategies
+3. **[Factory Pattern]({{< ref "../../design-patterns/4-Factory_Pattern.md" >}})**: `Order`, `MenuItem`, and `Table` objects can be created using Factory pattern
+
+---
+
 ## Key Points
 
 - **Time Complexity**: O(1) for most operations

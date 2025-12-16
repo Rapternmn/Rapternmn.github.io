@@ -304,6 +304,14 @@ game.make_move((1, 4), (3, 4))  # Black pawn
 
 ---
 
+## Design Patterns Used
+
+1. **[Factory Pattern]({{< ref "../../design-patterns/4-Factory_Pattern.md" >}})**: `Piece` objects (`Pawn`, `Rook`, `Knight`, `Bishop`, `Queen`, `King`) can be created using Factory pattern based on piece type
+2. **[Strategy Pattern]({{< ref "../../design-patterns/12-Strategy_Pattern.md" >}})**: Each piece type implements `is_valid_move()` differently, demonstrating Strategy pattern for move validation algorithms
+3. **[Command Pattern]({{< ref "../../design-patterns/13-Command_Pattern.md" >}})**: `Move` class encapsulates move operations, enabling undo/redo functionality and move history
+
+---
+
 ## Key Points
 
 - **Time Complexity**: O(1) for move validation, O(P) for checkmate detection
