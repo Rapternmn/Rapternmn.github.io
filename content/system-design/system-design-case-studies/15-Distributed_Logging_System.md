@@ -305,7 +305,7 @@ Services → [Log Agents] → [Message Queue] → [Log Processor]
 
 ### Fault Tolerance
 
-- **Agent Failures**: Retry sending logs
+- **Agent Failures**: Retry sending logs (at-least-once delivery)
 - **Queue Failures**: Buffer logs locally, retry
 - **Storage Failures**: Replicate data, failover
 - **Search Failures**: Route to healthy nodes

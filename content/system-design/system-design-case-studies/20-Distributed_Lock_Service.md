@@ -301,6 +301,12 @@ Clients → [Load Balancer] → [Lock Service Nodes]
 - **Lock Releases**: Notify when lock released
 - **Leader Changes**: Notify on leader change
 
+### Fencing Tokens (Concurrency Control)
+**Problem**: Client process pauses (GC), lock expires, another client acquires. Original client resumes and overwrites.
+**Solution**:
+- **Fencing Token**: Service returns monotonically increasing token with lock.
+- **Verification**: Resource (DB) checks if token > last seen token. Reject if lower.
+
 **Implementation**:
 - **Polling**: Poll for changes (simple, but inefficient)
 - **Push Notifications**: Push notifications (efficient)

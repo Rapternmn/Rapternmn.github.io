@@ -310,6 +310,13 @@ Client → Load Balancer → Cache Proxy
 - **Network Partitions**: Handle split-brain scenarios
 - **Data Loss**: Minimize data loss with replication
 
+### Cache Stampede (Thundering Herd)
+**Problem**: Multiple clients request same missing key simultaneously, causing load spike on database.
+**Solutions**:
+- **Locking**: First client gets lock, others wait.
+- **Probabilistic Early Expiration**: Refresh ahead of TTL.
+- **Request Coalescing**: Combine requests for same key.
+
 ### Consistency Trade-offs
 
 - **Availability vs Consistency**: Choose based on use case

@@ -314,6 +314,7 @@ Client → Load Balancer → [Partition Router]
 
 - **Node Failures**: Continue operation with remaining nodes
 - **Network Partitions**: Handle split-brain scenarios
+- **Hinted Handoff**: Store writes on healthy nodes if target is down (Sloppy Quorum)
 - **Data Loss**: Minimize data loss with replication
 
 ### Data Durability

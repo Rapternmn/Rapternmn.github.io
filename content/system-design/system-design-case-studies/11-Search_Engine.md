@@ -238,7 +238,7 @@ PR(A) = (1-d) + d × Σ(PR(T)/C(T))
 - **PR(A)**: PageRank of page A
 - **d**: Damping factor (0.85)
 - **T**: Pages linking to A
-- **C(T)**: Outgoing links from T
+- **C(T)**: Total number of outgoing links from page T
 
 **Ranking Implementation**:
 - **Simple**: Score-based ranking

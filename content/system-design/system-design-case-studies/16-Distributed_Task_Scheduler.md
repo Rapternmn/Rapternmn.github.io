@@ -121,6 +121,7 @@ completedAt: TIMESTAMP (nullable)
 workerId: UUID (nullable)
 retryCount: INT
 errorMessage: TEXT (nullable)
+lastHeartbeat: TIMESTAMP
 ```
 
 **Job Dependencies Table** (PostgreSQL):

@@ -180,7 +180,7 @@ Seed URLs → [URL Frontier] → [Crawler Instances]
 1. **PageRank**: Higher PageRank = higher priority
 2. **Depth**: Lower depth = higher priority
 3. **Domain**: Important domains = higher priority
-4. **Freshness**: Stale pages = higher priority
+4. **Freshness**: Stale pages & high change frequency = higher priority
 
 **Implementation**:
 - **Kafka**: Distributed message queue

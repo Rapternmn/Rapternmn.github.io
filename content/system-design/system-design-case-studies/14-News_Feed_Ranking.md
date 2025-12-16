@@ -142,13 +142,13 @@ cachedAt: TIMESTAMP
 ### Architecture
 
 ```
-Feed Request → [Candidate Generation] → [Feature Extraction]
+Feed Request → [Candidate Generation] (Recall)
                                             ↓
-                                    [Ranking Service]
+                                    [Lightweight Ranking] (Filtering)
                                             ↓
-                                    [ML Model] → [Re-ranking]
+                                    [Heavy Ranking] (ML Model)
                                             ↓
-                                    [Diversity Filter]
+                                    [Re-ranking] (Diversity/Business Logic)
                                             ↓
                                     [Feed Response]
 ```

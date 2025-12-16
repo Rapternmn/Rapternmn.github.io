@@ -340,7 +340,9 @@ Events → Kafka → [Stream Processor] → Real-Time Metrics (Redis)
 ### Real-Time vs Batch
 
 - **Real-Time**: Lower latency, higher cost
+- **Real-Time**: Lower latency, higher cost
 - **Batch**: Higher latency, lower cost
+- **Kappa Architecture**: Stream-only processing (simplifies pipeline)
 
 ### Storage vs Performance
 

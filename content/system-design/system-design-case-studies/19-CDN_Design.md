@@ -170,7 +170,7 @@ User → [DNS] → [Edge Server] → [Cache]
 
 **Cache Hit Flow**:
 1. **User Request**: User requests content
-2. **DNS Lookup**: DNS routes to nearest edge server
+3. **Anycast DNS**: Routes request to nearest edge IP
 3. **Edge Server**: Check cache
 4. **Cache Hit**: Return cached content
 5. **Response**: Return content to user
@@ -339,6 +339,7 @@ Edge (L1) → Regional (L2) → Origin Shield (L3) → Origin
 5. **Bot Protection**: Protect against bots
 6. **Analytics**: Track CDN performance
 7. **Multi-CDN**: Use multiple CDN providers
+8. **Geo-Blocking**: Restrict access by region
 
 ---
 
