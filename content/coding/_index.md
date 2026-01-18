@@ -11,6 +11,7 @@ This section covers essential coding skills including Data Structures and Algori
 
 - **[Data Structures]({{< ref "data-structures/_index.md" >}})** - Arrays, Strings, Linked Lists, Stacks, Queues, Heaps, Trees, Graphs, Hash Tables, and Sets with problems and patterns
 - **[Coding Patterns]({{< ref "coding-patterns/_index.md" >}})** - Two pointers, sliding window, binary search, dynamic programming, and more
+- **[Languages & Libraries]({{< ref "languages-and-libraries/_index.md" >}})** - C++ STL, Python libraries, and essential tools for competitive coding
 - **[LLD Case Studies]({{< ref "lld-case-studies/_index.md" >}})** - LLD fundamentals, OOPs, UML, and practical case studies
 - **[Design Patterns]({{< ref "design-patterns/_index.md" >}})** - SOLID principles, creational, structural, and behavioral patterns
 - **[Concurrency]({{< ref "concurrency/_index.md" >}})** - Threading, synchronization, rate limiter, thread pool, and concurrent systems
