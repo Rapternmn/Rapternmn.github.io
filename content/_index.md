@@ -18,5 +18,5 @@ Feel free to explore, learn, and engage with the content!
 
 ---
 
-**Connect with me:** [LinkedIn](https://www.linkedin.com/in/your-profile)
+**Connect with me:** [LinkedIn](https://www.linkedin.com/in/naman-bhayani-9b183692/)
 
