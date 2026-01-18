@@ -3,7 +3,7 @@ title = "System Design"
 description = "System Design: High Level Design (HLD), ML System Design, Data Engineering, Databases, and System Components. Learn to design scalable, distributed systems with proper infrastructure and architecture."
 +++
 
-This section covers High Level System Design (HLD) including Data Engineering, Databases, and System Components. Topics include data pipelines, ETL/ELT processes, data warehousing, database design, SQL/NoSQL databases, load balancing, caching, API Gateway, message queues, service discovery, CDN, distributed systems, scalability, availability, monitoring, and security.
+This section covers High Level System Design (HLD) including Data Engineering, Databases, System Components, and Cloud Services. Topics include data pipelines, ETL/ELT processes, data warehousing, database design, SQL/NoSQL databases, load balancing, caching, API Gateway, message queues, service discovery, CDN, distributed systems, scalability, availability, monitoring, security, and cloud services (AWS, GCP, Azure).
 
 ---
 
@@ -11,6 +11,7 @@ This section covers High Level System Design (HLD) including Data Engineering, D
 
 - **[System Design Case Studies]({{< ref "system-design-case-studies/_index.md" >}})** - High-Level System Design case studies: URL Shortener, Chat System, Video Streaming, Social Media Feed, E-commerce Platform
 - **[System Components]({{< ref "system-components/_index.md" >}})** - Load balancing, caching, API Gateway, message queues, service discovery, CDN, distributed systems, scalability, availability, monitoring, security
+- **[Cloud Services]({{< ref "cloud-services/_index.md" >}})** - AWS, GCP, and Azure services: compute, storage, databases, networking, messaging, security, and monitoring
 - **[API Design]({{< ref "api-design/_index.md" >}})** - API design guidelines, REST principles, HTTP methods, versioning, documentation, and best practices
 - **[Data Engineering]({{< ref "data-engineering/_index.md" >}})** - Data pipelines, ETL/ELT, data warehousing, streaming systems
 - **[Databases]({{< ref "databases/_index.md" >}})** - Database design, SQL/NoSQL, indexing, query optimization, transactions

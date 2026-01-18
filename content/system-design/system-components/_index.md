@@ -27,4 +27,5 @@ This section covers fundamental infrastructure components and building blocks us
 - **[Monitoring & Observability]({{< ref "11-Monitoring_Observability.md" >}})** - Metrics, logs, traces, and APM tools
 - **[Security & Authentication]({{< ref "12-Security_Authentication.md" >}})** - OAuth, JWT, RBAC, and security best practices
 - **[System Components Case Studies]({{< ref "13-System_Components_Case_Studies.md" >}})** - Real-world case studies combining multiple components
+- **[Networking Fundamentals]({{< ref "14-Networking_Fundamentals.md" >}})** - OSI model, TCP/IP, protocols (TCP, UDP, HTTP, HTTPS), DNS, IP addressing, routing, and network topologies
 
